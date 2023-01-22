@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://csdocs-de.pages.dev/sitemap.xml.gz

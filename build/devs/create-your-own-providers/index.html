@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.727702630434">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 2.4.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Creating your own Providers - Cloudstream 3 Documentation</title>
+    <meta name="title" content="Creating your own Providers - Cloudstream 3 Documentation">
+    <meta name="description" content="Providers in CloudStream consists primarily of 4 different parts:" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://csdocs-de.pages.dev/devs/create-your-own-providers/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://csdocs-de.pages.dev/devs/create-your-own-providers/">
+    <meta property="og:title" content="Creating your own Providers - Cloudstream 3 Documentation">
+    <meta property="og:description" content="Providers in CloudStream consists primarily of 4 different parts:">
+    <meta property="og:image" content="https://user-images.githubusercontent.com/46196380/184509999-0a50d13d-bc89-4f61-9f6e-f36648de0510.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://csdocs-de.pages.dev/devs/create-your-own-providers/">
+    <meta property="twitter:title" content="Creating your own Providers - Cloudstream 3 Documentation">
+    <meta property="twitter:description" content="Providers in CloudStream consists primarily of 4 different parts:">
+    <meta property="twitter:image" content="https://user-images.githubusercontent.com/46196380/184509999-0a50d13d-bc89-4f61-9f6e-f36648de0510.png">
+
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../resources/css/retype.css?v=2.4.0.727702630434" rel="stylesheet" />
+
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.727702630434" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.727702630434" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.727702630434" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between grow pr-6 md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/inas.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../static/base_ger.png">
+                            </span>
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">CS3Docs</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">German</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/recloudstream/cloudstream/">
+                                    <img class="mb-px mr-1" width="18" src="../../static/github.png" />
+                                    <span>Github</span>
+                                </a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://gitdab.com/recloudstream">
+                                    <img class="mb-px mr-1" width="18" src="../../static/gitdab.svg" />
+                                    <span>Gitdab</span>
+                                </a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://discord.com/invite/5Hus6fM" target="_blank">
+                                    <img class="mb-px mr-1" width="18" src="../../static/discord.png" />
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://matrix.to/#/#lagrapps:matrix.org" target="_blank">
+                                    <img class="mb-px mr-1" width="18" src="../../static/matrix.png" />
+                                    <span>Matrix</span>
+                                </a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+        
+                            <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                            style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
+                        </div>
+        
+                        <!-- Mobile search button mock -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placehokder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button mock -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+                </div>
+            
+                <div class="pl-6 mb-4 mt-1">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://github.com/recloudstream/cloudstream/">
+                                            <img class="mb-px mr-1" width="18" src="../../static/github.png" />
+                                            <span>Github</span>
+                                        </a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://gitdab.com/recloudstream">
+                                            <img class="mb-px mr-1" width="18" src="../../static/gitdab.svg" />
+                                            <span>Gitdab</span>
+                                        </a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://discord.com/invite/5Hus6fM" target="_blank">
+                                            <img class="mb-px mr-1" width="18" src="../../static/discord.png" />
+                                            <span>Discord</span>
+                                        </a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://matrix.to/#/#lagrapps:matrix.org" target="_blank">
+                                            <img class="mb-px mr-1" width="18" src="../../static/matrix.png" />
+                                            <span>Matrix</span>
+                                        </a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="grow min-w-0 px-6 md:px-16">
+                        <main class="relative pt-6 pb-16">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="creating-your-own-providers" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-your-own-providers">#</doc-anchor-trigger>
+        <span>Creating your own Providers</span>
+    </h1>
+</doc-anchor-target>
+<p>Providers in CloudStream consists primarily of 4 different parts:</p>
+<ul>
+<li><a href="https://recloudstream.github.io/dokka/app/com.lagradost.cloudstream3/-main-a-p-i/index.html#498495168%2FFunctions%2F492899073">Searching</a></li>
+<li><a href="https://recloudstream.github.io/dokka/app/com.lagradost.cloudstream3/-main-a-p-i/index.html#1356482668%2FFunctions%2F492899073">Loading the home page</a></li>
+<li><a href="https://recloudstream.github.io/dokka/app/com.lagradost.cloudstream3/-main-a-p-i/index.html#1671784382%2FFunctions%2F492899073">Loading the show page</a></li>
+<li><a href="https://recloudstream.github.io/dokka/app/com.lagradost.cloudstream3/-main-a-p-i/index.html#-930139416%2FFunctions%2F492899073">Loading the video links</a></li>
+</ul>
+<p>When making a provider it is important that you are confident you can scrape the video links first!
+Video links are often the most protected part of the website and if you cannot scrape them then the provider is useless.</p>
+<doc-anchor-target id="0-scraping">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#0-scraping">#</doc-anchor-trigger>
+        <span>0. Scraping</span>
+    </h2>
+</doc-anchor-target>
+<p>If you are unfamiliar with the concept of scraping, you should probably start by reading <a href="../scraping/">this guide</a> which should hopefuly familiarize you with this technique.</p>
+<doc-anchor-target id="1-searching">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-searching">#</doc-anchor-trigger>
+        <span>1. Searching</span>
+    </h2>
+</doc-anchor-target>
+<p>This one is probably the easiest, based on a query you should return a list of <a href="https://recloudstream.github.io/dokka/app/com.lagradost.cloudstream3/-search-response/index.html">SearchResponse</a></p>
+<p>Scraping the search results is essentially just finding the search item elements on the site (red box) and looking in them to find name, url and poster url and put the data in a SearchResponse.</p>
+<p><figure class="content-center">
+    <img src="https://user-images.githubusercontent.com/46196380/184509999-0a50d13d-bc89-4f61-9f6e-f36648de0510.png" alt="image" />
+    <figcaption class="caption">image</figcaption>
+</figure>
+</p>
+<p>The code for the search then ideally looks something like</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-kotlin"><code v-pre class="language-kotlin">// (code for Eja.tv)
+
+override suspend fun search(query: String): List&lt;SearchResponse&gt; {
+    return app.post(
+        mainUrl, data = mapOf(&quot;search&quot; to query) // Fetch the search data
+    ).document // Convert the response to a searchable document  
+        .select(&quot;div.card-body&quot;) // Only select the search items using a CSS selector
+        .mapNotNull { // Convert all html elements to SearchResponses and filter out the null search results
+            it.toSearchResponse()
+        }
+}
+
+// Converts a html element to a useable search response
+// Basically just look in the element for sub-elements with the data you want
+private fun Element.toSearchResponse(): LiveSearchResponse? {
+    // If no link element then it's no a valid search response
+    val link = this.select(&quot;div.alternative a&quot;).last() ?: return null
+    // fixUrl is a built in function to convert urls like /watch?v=..... to https://www.youtube.com/watch?v=.....
+    val href = fixUrl(link.attr(&quot;href&quot;))
+    val img = this.selectFirst(&quot;div.thumb img&quot;)
+    // Optional parameter, scraping languages are not required but might be nice on some sites
+    val lang = this.selectFirst(&quot;.card-title &gt; a&quot;)?.attr(&quot;href&quot;)?.removePrefix(&quot;?country=&quot;)
+        ?.replace(&quot;int&quot;, &quot;eu&quot;) //international -&gt; European Union 🇪🇺
+        
+    // There are many types of searchresponses but mostly you will be using AnimeSearchResponse, MovieSearchResponse
+    // and TvSeriesSearchResponse, all with different parameters (like episode count)
+    return LiveSearchResponse(
+        // Kinda hack way to get the title
+        img?.attr(&quot;alt&quot;)?.replaceFirst(&quot;Watch &quot;, &quot;&quot;) ?: return null,
+        href,
+        this@EjaTv.name,
+        TvType.Live,
+        fixUrl(img.attr(&quot;src&quot;)),
+        lang = lang
+    )
+}</code></pre>
+</doc-codeblock></div>
+<p>In this code snippet I have separated the Element to SearchResult conversion to a separate function because that function can often be used when scraping the home page later. No need to parse the same type of element twice.</p>
+<doc-anchor-target id="2-loading-the-home-page">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-loading-the-home-page">#</doc-anchor-trigger>
+        <span>2. Loading the home page</span>
+    </h2>
+</doc-anchor-target>
+<p>Getting the homepage is essentially the same as getting search results but with a twist: you define the queries in a variable like this:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-kotlin"><code v-pre class="language-kotlin">
+override val mainPage = mainPageOf(
+        Pair(&quot;1&quot;, &quot;Recent Release - Sub&quot;),
+        Pair(&quot;2&quot;, &quot;Recent Release - Dub&quot;),
+        Pair(&quot;3&quot;, &quot;Recent Release - Chinese&quot;),
+    )</code></pre>
+</doc-codeblock></div>
+<p>This dictates what the getMainPage function will be receiving as function arguments.
+Basically when the recent dubbed shows should be loaded the getMainPage gets called with a page number and the request you defined above.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-kotlin"><code v-pre class="language-kotlin">
+override suspend fun getMainPage(
+        page: Int,
+        request : MainPageRequest
+    ): HomePageResponse {
+
+    // page: An integer &gt; 0, starts on 1 and counts up, Depends on how much the user has scrolled.
+    // request.data == &quot;2&quot;
+    // request.name == &quot;Recent Release - Dub&quot;
+</code></pre>
+</doc-codeblock></div>
+<p>With these variables you should fetch the appropriate list of Search Response like this:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-kotlin"><code v-pre class="language-kotlin">
+// Gogoanime
+override suspend fun getMainPage(
+        page: Int,
+        request : MainPageRequest
+    ): HomePageResponse {
+        // Use the data you defined earlier in the pair to send the request you want.
+        val params = mapOf(&quot;page&quot; to page.toString(), &quot;type&quot; to request.data)
+        val html = app.get(
+            &quot;https://ajax.gogo-load.com/ajax/page-recent-release.html&quot;,
+            headers = headers,
+            params = params
+        )
+        val isSub = listOf(1, 3).contains(request.data.toInt())
+
+        // In this case a regex is used to get all the correct variables
+        // But if you defined the Element.toSearchResponse() earlier you can often times use it on the homepage
+        val home = parseRegex.findAll(html.text).map {
+            val (link, epNum, title, poster) = it.destructured
+            newAnimeSearchResponse(title, link) {
+                this.posterUrl = poster
+                addDubStatus(!isSub, epNum.toIntOrNull())
+            }
+        }.toList()
+
+        // Return a list of search responses mapped to the request name defined earlier.
+        return newHomePageResponse(request.name, home)
+    }</code></pre>
+</doc-codeblock></div>
+<p>This might seem needlessly convoluted, but this system is to allow &quot;infinite&quot; loading, e.g loading the next page of search
+responses when the user has scrolled to the end.</p>
+<p>TLDR: Exactly like searching but you defined your own queries.</p>
+<doc-anchor-target id="3-loading-the-show-page">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-loading-the-show-page">#</doc-anchor-trigger>
+        <span>3. Loading the show page</span>
+    </h2>
+</doc-anchor-target>
+<p>// Currently Work in progress</p>
+<p>The home page is a bit more complex than search results, but it uses the same logic used to get search results: using CSS selectors and regex to parse html into kotlin object. With the amount of info being parsed this function can get quite big, but the fundamentals are still pretty simple.</p>
+<p>A function can look something like this:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-kotlin"><code v-pre class="language-kotlin">
+    // The url argument is the same as what you put in the Search Response from search() and getMainPage() 
+    override suspend fun load(url: String): LoadResponse {
+        val document = app.get(url).document
+
+        val details = document.select(&quot;div.detail_page-watch&quot;)
+        val img = details.select(&quot;img.film-poster-img&quot;)
+        val posterUrl = img.attr(&quot;src&quot;)
+        // It's safe to throw errors here, they will be shown to the user and can help debugging. 
+        val title = img.attr(&quot;title&quot;) ?: throw ErrorLoadingException(&quot;No Title&quot;)
+
+        var duration = document.selectFirst(&quot;.fs-item &gt; .duration&quot;)?.text()?.trim()
+        var year: Int? = null
+        var tags: List&lt;String&gt;? = null
+        var cast: List&lt;String&gt;? = null
+        val youtubeTrailer = document.selectFirst(&quot;iframe#iframe-trailer&quot;)?.attr(&quot;data-src&quot;)
+        val rating = document.selectFirst(&quot;.fs-item &gt; .imdb&quot;)?.text()?.trim()
+            ?.removePrefix(&quot;IMDB:&quot;)?.toRatingInt()
+
+        // I would not really recommend 
+        document.select(&quot;div.elements &gt; .row &gt; div &gt; .row-line&quot;).forEach { element -&gt;
+            val type = element?.select(&quot;.type&quot;)?.text() ?: return@forEach
+            when {
+                type.contains(&quot;Released&quot;) -&gt; {
+                    year = Regex(&quot;\\d+&quot;).find(
+                        element.ownText() ?: return@forEach
+                    )?.groupValues?.firstOrNull()?.toIntOrNull()
+                }
+                type.contains(&quot;Genre&quot;) -&gt; {
+                    tags = element.select(&quot;a&quot;).mapNotNull { it.text() }
+                }
+                type.contains(&quot;Cast&quot;) -&gt; {
+                    cast = element.select(&quot;a&quot;).mapNotNull { it.text() }
+                }
+                type.contains(&quot;Duration&quot;) -&gt; {
+                    duration = duration ?: element.ownText().trim()
+                }
+            }
+        }
+        val plot = details.select(&quot;div.description&quot;).text().replace(&quot;Overview:&quot;, &quot;&quot;).trim()
+
+        val isMovie = url.contains(&quot;/movie/&quot;)
+
+        // https://sflix.to/movie/free-never-say-never-again-hd-18317 -&gt; 18317
+        val idRegex = Regex(&quot;&quot;&quot;.*-(\d+)&quot;&quot;&quot;)
+        val dataId = details.attr(&quot;data-id&quot;)
+        val id = if (dataId.isNullOrEmpty())
+            idRegex.find(url)?.groupValues?.get(1)
+                ?: throw ErrorLoadingException(&quot;Unable to get id from '$url'&quot;)
+        else dataId
+
+        val recommendations =
+            document.select(&quot;div.film_list-wrap &gt; div.flw-item&quot;).mapNotNull { element -&gt;
+                val titleHeader =
+                    element.select(&quot;div.film-detail &gt; .film-name &gt; a&quot;) ?: return@mapNotNull null
+                val recUrl = fixUrlNull(titleHeader.attr(&quot;href&quot;)) ?: return@mapNotNull null
+                val recTitle = titleHeader.text() ?: return@mapNotNull null
+                val poster = element.select(&quot;div.film-poster &gt; img&quot;).attr(&quot;data-src&quot;)
+                MovieSearchResponse(
+                    recTitle,
+                    recUrl,
+                    this.name,
+                    if (recUrl.contains(&quot;/movie/&quot;)) TvType.Movie else TvType.TvSeries,
+                    poster,
+                    year = null
+                )
+            }
+
+        if (isMovie) {
+            // Movies
+            val episodesUrl = &quot;$mainUrl/ajax/movie/episodes/$id&quot;
+            val episodes = app.get(episodesUrl).text
+
+            // Supported streams, they're identical
+            val sourceIds = Jsoup.parse(episodes).select(&quot;a&quot;).mapNotNull { element -&gt;
+                var sourceId = element.attr(&quot;data-id&quot;)
+                if (sourceId.isNullOrEmpty())
+                    sourceId = element.attr(&quot;data-linkid&quot;)
+
+                if (element.select(&quot;span&quot;).text().trim().isValidServer()) {
+                    if (sourceId.isNullOrEmpty()) {
+                        fixUrlNull(element.attr(&quot;href&quot;))
+                    } else {
+                        &quot;$url.$sourceId&quot;.replace(&quot;/movie/&quot;, &quot;/watch-movie/&quot;)
+                    }
+                } else {
+                    null
+                }
+            }
+
+            val comingSoon = sourceIds.isEmpty()
+
+            return newMovieLoadResponse(title, url, TvType.Movie, sourceIds) {
+                this.year = year
+                this.posterUrl = posterUrl
+                this.plot = plot
+                addDuration(duration)
+                addActors(cast)
+                this.tags = tags
+                this.recommendations = recommendations
+                this.comingSoon = comingSoon
+                addTrailer(youtubeTrailer)
+                this.rating = rating
+            }
+        } else {
+            val seasonsDocument = app.get(&quot;$mainUrl/ajax/v2/tv/seasons/$id&quot;).document
+            val episodes = arrayListOf&lt;Episode&gt;()
+            var seasonItems = seasonsDocument.select(&quot;div.dropdown-menu.dropdown-menu-model &gt; a&quot;)
+            if (seasonItems.isNullOrEmpty())
+                seasonItems = seasonsDocument.select(&quot;div.dropdown-menu &gt; a.dropdown-item&quot;)
+            seasonItems.apmapIndexed { season, element -&gt;
+                val seasonId = element.attr(&quot;data-id&quot;)
+                if (seasonId.isNullOrBlank()) return@apmapIndexed
+
+                var episode = 0
+                val seasonEpisodes = app.get(&quot;$mainUrl/ajax/v2/season/episodes/$seasonId&quot;).document
+                var seasonEpisodesItems =
+                    seasonEpisodes.select(&quot;div.flw-item.film_single-item.episode-item.eps-item&quot;)
+                if (seasonEpisodesItems.isNullOrEmpty()) {
+                    seasonEpisodesItems =
+                        seasonEpisodes.select(&quot;ul &gt; li &gt; a&quot;)
+                }
+                seasonEpisodesItems.forEach {
+                    val episodeImg = it?.select(&quot;img&quot;)
+                    val episodeTitle = episodeImg?.attr(&quot;title&quot;) ?: it.ownText()
+                    val episodePosterUrl = episodeImg?.attr(&quot;src&quot;)
+                    val episodeData = it.attr(&quot;data-id&quot;) ?: return@forEach
+
+                    episode++
+
+                    val episodeNum =
+                        (it.select(&quot;div.episode-number&quot;).text()
+                            ?: episodeTitle).let { str -&gt;
+                            Regex(&quot;&quot;&quot;\d+&quot;&quot;&quot;).find(str)?.groupValues?.firstOrNull()
+                                ?.toIntOrNull()
+                        } ?: episode
+
+                    episodes.add(
+                        newEpisode(Pair(url, episodeData)) {
+                            this.posterUrl = fixUrlNull(episodePosterUrl)
+                            this.name = episodeTitle?.removePrefix(&quot;Episode $episodeNum: &quot;)
+                            this.season = season + 1
+                            this.episode = episodeNum
+                        }
+                    )
+                }
+            }</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="todo-rest">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#todo-rest">#</doc-anchor-trigger>
+        <span>TODO: REST</span>
+    </h1>
+</doc-anchor-target>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results />
+                            </div>
+                            <footer class="clear-both">
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../devs/create-your-own-json-repository/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Creating your own JSON repository</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://github.com/anotherduckling">Website by Duckling</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script>window.__DOCS__ = { "title": "Creating your own providers", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+</body>
+</html>
