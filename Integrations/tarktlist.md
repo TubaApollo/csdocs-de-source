@@ -4,24 +4,24 @@ order: 995
 icon: /static/trakt.png
 ---
 
-# Using Trakt list as Catalogue
+# Trakt-Liste als Katalog verwenden
 
 !!! warning **Read this before installing**
-The Stremio extension is still experimental. Don't expect a stremio like experience. Most of the public stremio sources are torrent based but cloudstream doesn't support torrent stream. So, none of the popular sources will work here. The below trakt example is link only and it will not play any video. Also, this trakt doesn't sync anything.
+Die Stremio-Erweiterung ist noch experimentell. Erwarte kein Stremio-ähnliches Erlebnis. Die meisten öffentlichen Stremio-Quellen basieren auf Torrents, aber Cloudstream unterstützt keine Torrent-Streams. Daher wird keine der beliebten Quellen hier funktionieren. Das untenstehende Beispiel ist nur ein Link und spielt kein Video ab. Außerdem wird nichts synchronisiert.
 !!!
 
-[!badge variant="light" text="Step 1"] Install the stremio extension from english repo.
+[!badge variant="light" text="Schritt 1"] Installiere die Stremio-Erweiterung aus dem englischen Repo.
 
-[!badge variant="light" text="Step 2"] Go to [this site](https://2ecbbd610840-trakt.baby-beamup.club/configure)
+[!badge variant="light" text="Schritt 2"] Gehe zu [dieser Seite](https://2ecbbd610840-trakt.baby-beamup.club/configure)
 
-[!badge variant="light" text="Step 3"] Add the lists you want to see in the home section.
+[!badge variant="light" text="Schritt 3"] Füge die Listen hinzu, welche im Home-Bereich angezeigt werden sollen.
 
-[!badge variant="light" text="Step 4"] Click install
+[!badge variant="light" text="Schritt 4"] Klicke "Installieren"
 
-[!badge variant="light" text="Step 5"] Copy the link address of the install button that appears again
+[!badge variant="light" text="Schritt 5"] Kopiere die Linkadresse des erneut erscheinenden Installationsbuttons.
 
-[!badge variant="light" text="Step 6"] Clone the stremio addon with the link you just pasted
+[!badge variant="light" text="Schritt 6"] Klone das Stremio Addon mit dem Link, den du gerade eingefügt hast
 
-[!badge variant="light" text="Step 7"] At the start of the link, replace `stremio://` with `https://` and remove `manifest.json` from the end of the link
+[!badge variant="light" text="Schritt 7"] Ersetze den Anfang des Links `stremio://` durch `https://` und entferne `manifest.json` am Ende des Links
 
 [!embed](https://www.youtube.com/watch?v=DLCSVxSBfxA)

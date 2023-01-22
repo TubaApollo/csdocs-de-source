@@ -4,112 +4,111 @@ order: 997
 icon: /static/nginx.png
 ---
 
-# NGINX Setup
+# NGINX Einrichtung
 
-### What is Nginx?
+### Was ist NGINX?
 
-It's a free and open source software, it's really powerful but here we will only use it to display files on a simple web interface.
-The files we are using will be media such as movies or animes, that you need to download yourself (here we will use torrents)
+Es handelt sich dabei um eine freie und quelloffene Software, die sehr leistungsfähig ist, die wir hier aber nur zur Darstellung von Dateien auf einer einfachen Weboberfläche verwenden werden.
+Bei den Dateien, die wir verwenden, handelt es sich um Medien wie Filme oder Animationen, welche selbst heruntergeladen werden müssen (hier verwenden wir Torrents).
 
-I will also refer to nginx as `HTTP access` in this tutorial because it allows the user to access his file using http.
+In diesem Tutorial werde ich NGINX auch als "HTTP-Zugriff" bezeichnen, da es dem Benutzer erlaubt, über http auf seine Datei zuzugreifen.
 
-**You must have a server (like a raspberry pi, a NAS or a seedbox) and a media collection to use this feature !**
-
-___
-### Why did I create that?
-
-I used to be a user of [jellyfin](https://jellyfin.org/) because I didn't want to pay for a subscription and I didn't want to use proprietary software just to display files like plex.
-It wasn't working really well and I sometimes wasn't able to play Movies and it semmed to use a lot of ressources
-The solution? Scrape the media files and their metadata using Cloudstream-3
-
-The advantages of this provier over jellyfin are that it's lightweight and integrated with cloudstream
+**Ein Server und eine Mediensammlung wird benötigt (z.B. Raspberry Pi, NAS oder Seedbox), um diese Funktion nutzen zu können!**
 
 ___
-**To setup nginx you must have a media server:**
-- A 'managed' seedbox: is a service that you can rent and will take care of finding, downloading torrents and seeding them for you, check out mine [here](https://www.sarlays.com/my-media-server/), easiest method (that I use)
-- You can also self host the media server, I cover the install of nginx [here](https://www.sarlays.com/unlisted/self-host-nginx) (harder)
+### Warum habe ich das erstellt?
 
-Here I'll cover the install on a managed seedbox using ultra.cc
+I used to be a user of [jellyfin](https://jellyfin.org/) because I didn't want to Ich habe früher [Jellyfin](https://jellyfin.org/) benutzt, weil ich kein Abonnement bezahlen wollte und keine proprietäre Software wie Plex benutzen wollte. Aber es funktionierte nicht wirklich gut und ich konnte manchmal keine Filme abspielen und hat eine Menge Ressourcen verbraucht. Die Lösung? Scrapen der Mediendateien und ihrer Metadaten mit Cloudstream-3.
+
+Die Vorteile dieses Anbieters gegenüber Jellyfin sind, dass er schlank und mit Cloudstream integriert ist.
+
+___
+**Um NGINX zu installieren, wird ein Medienserver benötigt:**
+- Eine 'managed' Seedbox: ist ein Service, den du mieten kannst und der sich um das Finden, Herunterladen und Seeden von Torrents für dich kümmert, siehe [hier](https://www.sarlays.com/my-media-server/), die einfachste Methode (die ich benutze).
+- Du kannst den Medienserver auch selbst hosten, ich beschreibe die Installation von NGINX [hier](https://www.sarlays.com/unlisted/self-host-nginx) (schwieriger).
+
+Hier beschreibe ich die Installation auf einer Managed Seedbox mit ultra.cc
 
 ![](https://media.discordapp.net/attachments/1015131233824538624/1063102592508506133/image.png)
 
 ___
-### What are trackers?
+### Was sind Tracker?
 
-They are basically websites where you create an account and they "list" content hosted by other users registered on the website (they don't host the content themself).
-Sonarr and radarr will then ask prowlarr to search for something specific like a movie or an anime inside this list built by the tracker
+Dabei handelt es sich um Websites, auf denen man ein Konto einrichtet und die dann Inhalte auflisten, die von anderen auf der Website registrierten Benutzern gehostet werden (sie selbst hosten die Inhalte nicht).
+Sonarr und Radarr fordern dann Prowlarr auf, nach etwas Bestimmtem zu suchen, z. B. nach einem Film oder einem Anime in der vom Tracker erstellten Liste.
 
-Once the movie is found, the torrent file is sent to transmission.
-Transmission is basically a torrent downloader, it will download the files given by radarr and sonarr
-
-___
-### Installation with ultraseedbox
-
-Ultraseedbox (now called ultra.cc) is a service that allows you to download torrents with really fast download speed and then seed those torrent (which means sharing it with other users how want to download them 24/7) but it cost some money, you can check them out [here](https://ultra.cc/) (I am not affiliated with them in any way, but their support and service is really great for me).
-
-You can use any similar seedbox service that offers http access through nginx.
-
-For my setup you have to install:
-
-**required (for metadata):**
-- Sonarr (for tv shows)
-- Radarr (for movies)
-- Nginx - http access (already installed by default on ultra.cc)
+Sobald der Film gefunden ist, wird die Torrent-Datei an Transmission gesendet.
+Transmission ist im Grunde ein Torrent-Downloader, der die von Radarr und Sonarr angegebenen Dateien herunterlädt.
 
 ___
-### Setting up radarr / sonarr
-You must use a metadata downloader (that downloads `.nfo` files), I'll use radarr and sonarr since it's the easiest for me (it might be possible to download metadata using something else but I didn't try)
+### Installation mit Ultraseedbox
 
-To install radarr and sonarr go into your control pannel, under installers search for sonarr and radarr
+Ultraseedbox (jetzt ultra.cc genannt) ist ein Dienst, der es ermöglicht, Torrents mit schnellen Downloadgeschwindigkeiten herunterzuladen und diese Torrents dann zu seeden (d.h. sie mit anderen Nutzern zu teilen, die sie jederzeit herunterladen wollen), allerdings kostet es etwas Geld, [hier](https://ultra.cc/) findest du die Website (ich bin in keiner Weise mit ihnen verpartnert, aber ich finde ihren Support und Service wirklich solide).
 
-You now have to enable the download of metadata
+**Du kannst jeden Seedbox-Dienst verwenden, der http-Zugriff über NGINX bietet.**
 
-To do so for Radarr go inside radarr to:
+Für meine Installation musst du...
 
-`settings > metadata`
+**erforderlich (für Metadaten):**
+- Sonarr (für TV-Shows) - auch Anime
+- Radarr (für Filme)
+- Nginx - http-Zugriff (bereits standardmäßig auf ultra.cc installiert)
 
-you have to enable Kodi (XMBC) / Emby metadata
+...installieren
+___
+### Einrichten von Radarr / Sonarr
+Du musst einen Metadaten-Downloader verwenden (der .nfo-Dateien herunterlädt), ich benutze Radarr und Sonarr, weil es für mich am einfachsten ist (eventuell ist es möglich, Metadaten mit etwas anderem herunterzuladen, aber ich habe es nicht versucht).
 
-I use the following settings in radarr
+Um Radar und Sonar zu installieren, gehe zu deinem Control Panel und suche unter Installers nach Sonar und Radar.
+
+Nun muss der Download der Metadaten aktiviert werden.
+
+Für Radarr gehe dazu auf:
+
+`Einstellungen > Metadaten`
+
+Dort muss Kodi (XMBC) / Emby Metadaten aktiviert werden.
+
+Ich verwende folgende Einstellungen in Radarr
 
 ![image](https://user-images.githubusercontent.com/18114966/187868344-b20c29ff-efdd-4f24-a655-a019eab06f2b.png)
 
-you must untick "use Movie.nfo" as shown in the screenshot
+das Häkchen bei "use Movie.nfo" muss entfernt werden, wie auf dem Screenshot zu sehen ist.
 
-For Sonarr go to:
+Für Sonarr gehe dazu auf:
 
-`settings > metadata`
+`Einstellungen > Metadaten`
 
-And enable those settings
+Und aktiviere folgende Einstellungen
 
 ![image](https://user-images.githubusercontent.com/18114966/187868381-0c766ce5-0ab9-4d07-b555-44764665d2f6.png)
 
-If the metadata is not present, the movie / tv show will not be displayed by cloudstream
+Wenn die Metadaten nicht vorhanden sind, wird der Film / die TV-Show von Cloudstream nicht angezeigt.
 
-Now we are ready, if you want to add folders to the http access you can follow the documentation coming from [ultra.cc](https://docs.usbx.me/books/http-access/page/downloading-files-from-your-ultracc-slot-using-http-access)
+Jetzt sind wir bereit, falls neue Ordner dem http-Zugang hinzugefügt werden sollen, folge dieser Dokumentation von [ultra.cc](https://docs.usbx.me/books/http-access/page/downloading-files-from-your-ultracc-slot-using-http-access)
 
 ___
 ### In cloudstream
-Go into the settings of Cloudstream-3 and click the Nginx server url button
+Gehe in die Cloudstream-3 Einstellungen -> Erweiterungen -> English providers repository -> nach "NGINX" suchen -> das Einstellungssymbol drücken, es öffnet sich ein Dialogfeld, dort "Quelle" auswählen. 
 
-Here you need to type the exact url of the http nginx server where you access your files, for exemple https://myusername.myles.usbx.me/
+Hier muss die genaue URL des http-NGINX-Servers eingegeben werden, über den auf die Dateien zugegriffen werden soll, z. B. https://myusername.myles.usbx.me/.
 
-The http access requires authentification, you have to go under Nginx Credentials and type your username and password.
+Der http-Zugang erfordert eine Authentifizierung, unter NGINX Zugangsdaten muss der Benutzernamen und das Passwort eingeben werden.
 
-Those credentials are written in the control pannel of ultra.cc under:
+Diese Anmeldedaten sind im Controlpanel von ultra.cc hier zu finden:
 
 `Access details > HTTP proxy access`
 
-As written in the description, you have to supply those credentials using a very specific format,
-let's say your username is `mycoolusername` and your password is `password1234` (Please use a password manager lol), then you have to type in the input: `mycoolusername:password1234`
+Wie in der Beschreibung angegeben, müssen diese Anmeldedaten in einem bestimmten Format eingeben werden,
+angenommen, der Benutzername ist `meincoolerusername` und Ihr Passwort ist `passwort1234` (bitte benutze einen Passwortmanager lol), dann muss folgendes eingegeben werden: "mycoolusername:password1234".
 
 ![image](https://user-images.githubusercontent.com/18114966/187868588-98bfd993-1eee-4274-97b6-88934b877342.png)
 
 
-You now have to restart the app to apply the changes.
+Nun muss die Anwendung neu gestartet werden, um die Änderungen zu übernehmen.
 
-Nginx will now show up in the sources list on the home page
+NGINX wird nun in der Liste der Quellen auf der Startseite angezeigt.
 
-It might say that no url is supplied when starting the application, you can just hit the retry button and it should work fine
+Es kann sein, dass beim Starten der Anwendung angezeigt wird, dass keine URL angegeben wurde.
 
-That's it, you added nginx to Cloudstream
+Das war's, NGINX wurde zu Cloudstream hinzugefügt

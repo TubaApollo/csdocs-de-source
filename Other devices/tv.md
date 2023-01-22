@@ -5,27 +5,27 @@ icon: /static/tv.svg
 ---
 
 
-# Installation on TV
+# Installation auf einem TV
 
-You can follow the [!badge variant="secondary" text="Standard Setup Process"](/index.md/#standard-setup) here too. But if your TV browser isn't working, follow these methods to install cloudstream.
+Du kannst auch dem [!badge variant="secondary" text="Standard-Setup-Prozess"](/index.md/#standard-setup) folgen, aber wenn dein TV-Browser nicht funktioniert, folge dieser Anleitung, um Cloudstream zu installieren.
 
-## Installing CS3
+## CS3 installieren
 
-### Method 1: Download using code
+### Methode 1: Download mit Code
 
-!!!warning Before starting the process
+!!!warning Vor dem Start
 
-[!badge variant="light" text="Step 1"] Make sure that you have **installed the downloader.**
+[!badge variant="light" text="Schritt 1"] Vergewissere dich, dass du **den Downloader heruntergeladen hast.**
 
-- for [**Android tv**](https://play.google.com/store/apps/details?id=com.esaba.downloader&hl=en_GB&gl=US)
+- für [**Android TV**](https://play.google.com/store/apps/details?id=com.esaba.downloader&hl=en_GB&gl=US)
 
-- for [**Fire tv**](https://www.amazon.com/AFTVnews-com-Downloader/dp/B01N0BP507) 
+- für [**Fire TV**](https://www.amazon.com/AFTVnews-com-Downloader/dp/B01N0BP507) 
 
-[!badge variant="light" text="Step 2"] Have **enabled unknown sources** in developer options.
+[!badge variant="light" text="Schritt 2"] **unbekannte Quellen** in den Entwickler-Einstellungen zugelassen hast.
 !!!
 
 
-!!!info Please read these docs if you're unsure
+!!!info Wenn du dir nicht sicher bist, dann schau dir die folgenden Docs an
 - [**Android TV**](https://www.youtube.com/watch?v=W7NmOnhVd18)
 
 - [**Fire TV**](https://troypoint.com/how-to-jailbreak-a-firestick/)
@@ -33,30 +33,30 @@ You can follow the [!badge variant="secondary" text="Standard Setup Process"](/i
 
 
 ### The process
-[!badge variant="light" text="Step 1"] Open **Downloader** on your device
+[!badge variant="light" text="Schritt 1"] Öffne **Downloader** auf deinem Gerät
 
-[!badge variant="light" text="Step 2"] In the search box, type `532423`, and wait 5 seconds.
+[!badge variant="light" text="Schritt 2"] Im Suchfeld, tippe `532423`, und warte 5 Sekunden.
 
-[!badge variant="light" text="Step 3"] Once the timer is up, click **install** on the popup
+[!badge variant="light" text="Schritt 3"] Sobald der Timer abgelaufen ist, klicke im Popup-Fenster auf **Installieren**.
 
-[!badge variant="light" text="Step 4"] Click **install once again** to install Cloudstream
+[!badge variant="light" text="Schritt 4"] Klicke auf **noch einmal installieren**, um Cloudstream zu installieren
 
-[!badge variant="light" text="Step 5"] Click Launch
+[!badge variant="light" text="Schritt 5"] Klicke auf Starten
 
 [!embed](https://www.youtube.com/watch?v=BY22OtJYI0c)
 ___
-### Method 2: Using file sharing app
+### Methode 2: Dateien-App benutzen
 
-!!!warning Before starting the process
-[!badge variant="light" text="Step 1"] Download [Send Files to Tv](https://play.google.com/store/apps/details?id=com.yablio.sendfilestotv) on **both tv and mobile device.**
+!!!warning Vor dem Start
+[!badge variant="light" text="Step 1"] Lade [Send Files to Tv](https://play.google.com/store/apps/details?id=com.yablio.sendfilestotv) auf **sowohl Fernseher als auch Mobilgerät herunter.**
 
-[!badge variant="light" text="Step 2"] Download cs3 [!badge variant="primary" icon="/static/stable.png" text="Stable"](https://github.com/recloudstream/cloudstream/releases/latest) or [!badge variant="danger" icon="/static/pre.png" text="Pre-release"](https://github.com/recloudstream/cloudstream/releases/pre-release) in mobile
+[!badge variant="light" text="Step 2"] Lade CS3 [!badge variant="primary" icon="/static/stable.png" text="Stabil"](https://github.com/recloudstream/cloudstream/releases/latest) oder [!badge variant="danger" icon="/static/pre.png" text="Vorabversion"](https://github.com/recloudstream/cloudstream/releases/pre-release) auf deinem Mobilgerät herunter.
 
-[!badge variant="light" text="Step 3"] Connect both devices to same Wi-Fi
+[!badge variant="light" text="Step 3"] Verbinde beide Geräte mit demselben WLAN
 !!!
 
-[!embed](https://youtu.be/lYQ9aBZnWZw)
+[!embed](https://nekocap.com/view/8VOKbLOZr0?embed=true)
 ___
-## Installing repositories
+## Repositories installieren
 
-Follow [!badge variant="secondary" text="this guide"](/index.md/#manual-setup), If the tv browser isn't working.
+Folge [!badge variant="secondary" text="diesem Guide"](/index.md/#manuelles-setup), falls dein TV-Browser nicht funktioniert.

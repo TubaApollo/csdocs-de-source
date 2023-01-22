@@ -1,21 +1,21 @@
 ---
-label: External Player
+label: Externer Player
 order: 999
 icon: play
 ---
 
-# External player
+# Externer Player
 
-## Opening a video in an external player
+## Öffnen eines Videos in einem externen Player
 
-[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" text="Episode page"] → **Press and hold the epsiode** → [!badge variant="dark" text="play in ABC player"]
+[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" text="Episoden Liste"] → **Drücke und halte die Episode** → [!badge variant="dark" text="In ABC-Player wiedergeben"]
 
 !!!info
-If the player is not in the pop up list, Click [!badge variant="dark" text="play in browser"]. It should prompt all the available options including your desired player. You can also copy the video link and stream it in the [!badge variant="dark" text="Network stream"] or the [!badge variant="dark" text="Stream"] option in your player. 
+Wenn der Player nicht in der Liste erscheint, klicke auf [!badge variant="dark" text="In Browser wiedergeben"]. Es sollten alle verfügbaren Optionen angezeigt werden, einschließlich des gewünschten Players. Auch kann der Videolink kopiert und über die Option [!badge variant="dark" text="Netzwerk-Stream"] oder die Option [!badge variant="dark" text="Stream"] in dem Player gestreamt werden.
 !!!
 
-## Making Ext Player default
-[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="/static/gear.png" text="Settings"] → [!badge variant="dark" text="Player"] → [!badge variant="dark" icon="play" text="Preferred video player"] → [!badge variant="dark" text="Choose Your Video player"]
+## Externen Player als Standard festlegen
+[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="/static/gear.png" text="Einstellungen"] → [!badge variant="dark" text="Player"] → [!badge variant="dark" icon="play" text="Bevorzugter Videoplayer"] → [!badge variant="dark" text="Wähle deinen Videoplayer aus"]
 
 [!embed](https://www.youtube.com/watch?v=cXj9CAEf-Ys)
 
