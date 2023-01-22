@@ -1,6 +1,6 @@
 ---
 label: Cloudstream Setup
-icon: /static/base.png
+icon: /static/base_ger.png
 ---
 # Erste Schritte
 
