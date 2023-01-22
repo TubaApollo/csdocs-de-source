@@ -81,10 +81,10 @@ Die Verwendung eines VPN kann manchmal die Geschwindigkeit deiner Internetverbin
 
 In einigen Fällen kann ein VPN jedoch die Geschwindigkeit des Videostreaming verbessern. Dies ist darauf zurückzuführen, dass einige Internet-Diensteanbieter (ISP) Techniken zur Begrenzung des Datenverkehrs einsetzen, um die Bandbreite für bestimmte Arten von Internetverkehr, wie z. B. Videostreaming, zu begrenzen. Mit einem VPN kannst du diese Beschränkungen umgehen und so auf das Internet zugreifen, als wärst du mit einem anderen Netzwerk verbunden.
 
-Darüber hinaus bieten einige VPNs Server an, die speziell für Streaming optimiert sind. So können Sie sich mit einem Server verbinden, der den Servern des Streaming-Dienstes am nächsten liegt, wodurch die Entfernung und die Latenzzeit, die Ihre Daten zurücklegen müssen, verringert werden, was zu einer höheren Streaming-Geschwindigkeit führen kann.
+Darüber hinaus bieten einige VPNs Server an, die speziell für Streaming optimiert sind. So kannst du dich mit einem Server verbinden, der den Servern des Streaming-Dienstes am nächsten liegt, wodurch die Entfernung und die Latenzzeit, die deine Daten zurücklegen müssen, verringert werden, was zu einer höheren Streaming-Geschwindigkeit führen kann.
 
 !!!info
-Es ist wichtig zu beachten, dass der Einfluss von VPN auf die Streaming-Geschwindigkeit stark von verschiedenen Faktoren wie dem VPN-Anbieter, dem Standort des Servers, der Geschwindigkeit deiner Internetverbindung und der Entfernung zwischen Ihrem Gerät und dem VPN-Server abhängt.
+Es ist wichtig zu beachten, dass der Einfluss von VPN auf die Streaming-Geschwindigkeit stark von verschiedenen Faktoren wie dem VPN-Anbieter, dem Standort des Servers, der Geschwindigkeit deiner Internetverbindung und der Entfernung zwischen deinem Gerät und dem VPN-Server abhängt.
 !!!
 
 !!!light Zusammenfassung
@@ -95,7 +95,7 @@ ___
 
 ## VPN und Sicherheit
 
-Wenn du ein VPN verwendest, wird dein Internetverkehr durch einen verschlüsselten Tunnel zu einem VPN-Server geleitet, bevor er das Internet erreicht. Dadurch wird es für deinen Internetdienstanbieter (ISP) schwieriger zu sehen, welche Websites Sie besuchen.
+Wenn du ein VPN verwendest, wird dein Internetverkehr durch einen verschlüsselten Tunnel zu einem VPN-Server geleitet, bevor er das Internet erreicht. Dadurch wird es für deinen Internetdienstanbieter (ISP) schwieriger zu sehen, welche Websites du besuchst.
 
 Es ist jedoch wichtig zu wissen, dass ein VPN es deinem Internetanbieter zwar erschweren kann, die von Ihnen besuchten Websites zu sehen, es aber nicht unmöglich macht. Einige VPNs bieten keine absolute Vertraulichkeit, d. h. wenn ein Angreifer deinen Internetverkehr abfängt, kann er ihn möglicherweise entschlüsseln und sehen, welche Websites du besuchst. Darüber hinaus speichern einige VPNs möglicherweise Protokolle deiner Internetaktivitäten, auf die dein Internetdienstanbieter oder andere Dritte zugreifen können.
 
