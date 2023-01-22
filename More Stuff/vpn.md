@@ -36,7 +36,7 @@ Windscribe hat mehr kostenlose Server als ProtonVPN. Das bedeutet weniger Traffi
 	1. [!badge variant="dark" text="Starte"] [!badge variant="secondary" text="Replit"](https://replit.com/@aliilapro/warp) und füge deine [!badge variant="dark" text="ID"] dort ein.
 	2. Oder, gehe zu [!badge variant="secondary" text="Google collab"](https://colab.research.google.com/github/TheCaduceus/WARP-UNLIMITED-ADVANCED/blob/main/ipynb/Colab.ipynb), füge dort deine [!badge variant="dark" text="ID"] ein und starte das Programm.
 
-Das Programm generiert nun alle 20 Sekunden 1 GB kostenlose WARP+ Empfehlungsprämie. Es dauert kurz bis die Empfehlungsprämie in der App angezeigt wird.
+Das Programm generiert nun alle 20 Sekunden 1 GB kostenlose WARP+ Empfehlungsprämie. Es dauert kurz, bis die Empfehlungsprämie in der App angezeigt wird.
 !!!
 
 ### Self Hosted
