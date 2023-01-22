@@ -1,6 +1,6 @@
 input: 
 output: build
-url: https://csdocs-de.pages.dev/
+url: https://cs3docs-de.apollo.moe/
 branding:
   logo: static/inas.png
   logoDark: /static/base_ger.png
@@ -8,7 +8,7 @@ branding:
   label: German
 
 meta:
-  title: " - Cloudstream 3 Documentation"
+  title: " - Cloudstream 3 Dokumentation"
 
 links:
   - text: Github
