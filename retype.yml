@@ -1,18 +1,14 @@
 input: 
 output: build
-url: https://docs.cloudstream.cf/
+url: https://csdocs-de.pages.dev/
 branding:
   logo: static/inas.png
-  logoDark: /static/base.png
+  logoDark: /static/base_ger.png
   title: CS3Docs
-  label: 
+  label: German
 
 meta:
   title: " - Cloudstream 3 Documentation"
-
-edit:
-  repo: "https://github.com/recloudstream/csdocs/edit/"
-  branch: master
 
 links:
   - text: Github

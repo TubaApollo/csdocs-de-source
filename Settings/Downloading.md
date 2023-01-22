@@ -1,17 +1,17 @@
 ---
-label: Downloading
+label: Herunterladen
 order: 1000
 icon: download
 ---
 
-# Downloading From Cloudstream
+# Aus Cloudstream herunterladen
 
-## Enternal Downloading
+## Interner Download
 
-You can download from any source without any issue using 1DM. Max the Number of connections to get the best download speed.
+Mit 1DM ist das herunterladen von jeder Quelle ohne jegliche Probleme möglich. Maximiere die Anzahl der Verbindungen, um die beste Download-Geschwindigkeit zu erhalten.
 
 [!embed](https://www.youtube.com/watch?v=eGbHbzyIsio)
 
-## Change video quality or source
+## Videoqualität oder Quelle ändern
 
 [!embed](https://www.youtube.com/watch?v=vMpZEnAZhcY)

@@ -2,34 +2,34 @@
 label: Cloudstream Setup
 icon: /static/base.png
 ---
-# Getting Started
+# Erste Schritte
 
-Cloudstream is an android app for streaming and downloading Movies, TV-Series, Anime, Asian contents and Livestreams. The app provides all the contents without any ads, sign-up and subscription.
+Cloudstream ist eine Android-App zum Streamen und Herunterladen von Filmen, TV-Serien, Anime, asiatischen Inhalten und Livestreams. Die App bietet alle Inhalte ohne Werbung, Anmeldung und Abonnement.
 
 ![](/static/cover.png)
 ___
 ## Standard Setup
 
-[!badge variant="light" text="Step 1"] Install the cloudstream base app [!badge variant="primary" icon="/static/stable.png" text="Stable"](https://github.com/recloudstream/cloudstream/releases/latest) or [!badge variant="danger" icon="/static/pre.png" text="Pre-release"](https://github.com/recloudstream/cloudstream/releases/pre-release)
+[!badge variant="light" text="Schritt 1"] Installiere die Cloudstream-App [!badge variant="primary" icon="/static/stable.png" text="Stabil"](https://github.com/recloudstream/cloudstream/releases/latest) oder [!badge variant="danger" icon="/static/pre.png" text="Vorabversion"](https://github.com/recloudstream/cloudstream/releases/pre-release)
 
-[!badge variant="light" text="Step 2"] Install the [!badge variant="secondary" icon="repo" text="repositories"](Repositories.md)
+[!badge variant="light" text="Schritt 2"] Installiere die [!badge variant="secondary" icon="repo" text="Repositories"](Repositories.md)
 
-[!badge variant="light" text="Step 3"] Go to **[!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Settings"] → [!badge variant="dark" icon="" text="Extensions"] → [!badge variant="dark" icon="" text="Your installed Repository"]** and install your desired extensions.
+[!badge variant="light" text="Step 3"] Gehe zu **[!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Einstellungen"] → [!badge variant="dark" icon="" text="Erweiterungen"] → [!badge variant="dark" icon="" text="Deine installierten Repositories"]** und installiere die gewünschten Erweiterungen.
 
-[!badge variant="light" text="Step 4"] Go back to [!badge variant="dark" icon="home" text="Home"] and click the [!badge variant="dark" icon="filter" text="None"] button at the bottom right. Then select the catagory of the extension you have installed and select the extension.
+[!badge variant="light" text="Step 4"] Gehe zurück zu [!badge variant="dark" icon="home" text="Startseite"] und klicke die [!badge variant="dark" icon="filter" text="None"] Schaltfläche, welche sich unten rechts befindet. Wähle dann die Kategorie der installierten Erweiterung und anschließend die Erweiterung aus.
 
-[!embed](https://www.youtube.com/watch?v=B_WmCAUCy2c)
+[!embed](https://youtu.be/u8h1rUZUYaA)
 ___
-## Manual Setup
+## Manuelles Setup
 
-You can install repositories using short codes too.
+Es können Repositories auch mit Kurzcodes installiert werden.
 
-[!badge variant="light" text="Step 1"] Copy the shortcodes from the [!badge variant="secondary" icon="repo" text="repositories"](Repositories.md)
+[!badge variant="light" text="Schritt 1"] Kopiere die Kurzcodes aus [!badge variant="secondary" icon="repo" text="Repositories"](Repositories.md)
 
-[!badge variant="light" text="Step 2"] Paste the code in [!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Settings"] → [!badge variant="dark" icon="" text="Extensions"] → [!badge variant="dark" icon="plus" text="Add Repository"] → [!badge variant="dark" icon="" text="Repository URL"] and click [!badge variant="dark" icon="plus" text="Add Repository"]
+[!badge variant="light" text="Step 2"] Kopiere den Code in [!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Einstellungen"] → [!badge variant="dark" icon="" text="Erweiterungen"] → [!badge variant="dark" icon="plus" text="Repository hinzufügen"] → [!badge variant="dark" icon="" text="Repository-URL"] und klicke[!badge variant="dark" icon="plus" text="Repository hinzufügen"]
 
-[!embed](https://youtu.be/Wpq9MPajOVc)
+[!embed](https://youtu.be/d9veQGxHnsI)
 
-!!!contrast If you aren't able to add repositories using these methods
-Use vpn in your device because your ISP is blocking Github raw URLs. You can try [!badge variant="link" text="these VPNs"](/recapps.md/#external-media-player) for the process.
+!!!contrast Wenn mit diesen Methoden keine Repositories hinzugefügt werden können, gehe wie folgt vor:
+Verwende ein VPN auf dem Gerät, da dein ISP die rohen URLs von Github blockiert. (In Deutschland in der Regel kein Problem) <br>Du kannst einen [!badge variant="secondary" text="dieser VPNs"](/recapps.md/#externer-media-player) für diese Methode ausprobieren.
 !!!

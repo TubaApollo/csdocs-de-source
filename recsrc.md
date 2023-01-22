@@ -1,12 +1,12 @@
 ---
-label: Recommended Sources
+label: Empfohlene Quellen
 icon: star
 order: 999
 ---
 
-## English
+## Englisch
 
-### Movies & TV Series
+### Filme & TV-Serien
 1. Sorastream `Hexated`
 2. Superstream `English`
 3. Sflix bundle `English`
@@ -22,7 +22,7 @@ order: 999
 7. Tenshi `English`
 8. Gogo `English`
 
-### Asian Contents
+### asiatische Inhalte
 1. Sorastream `Hexated`
 2. Kisskh `Hexated` 
 3. Kissasian `Hexated`
@@ -35,3 +35,14 @@ order: 999
 3. TV247 `Hexated`
 4. 123TV `Hexated`
 5. Crichd `Darkdemon`
+
+</br>
+
+## Deutsch
+
+### Filme & TV-Serien
+1. XCine `Hexated`
+
+### Anime
+1. Kamyroll DE `Crunchyroll`
+2. Anifreakz `Hexated`

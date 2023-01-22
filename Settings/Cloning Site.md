@@ -1,20 +1,20 @@
 ---
-label: Site Cloning
+label: Klonen einer Website
 order: 990
 icon: plus
 ---
 
-# Site Cloning
+# Klonen einer Website
 
-If the site in the app is blocked for your region, you can make a clone of that by using the info of a site that is working for you. The site has to be the mirror of the site that is already in the app. You can't clone a site of different structure.
+Wenn die Website in der App für deine Region gesperrt ist, kannst du einen Klon der Website erstellen, indem die Domain einer Website verwendet wird, die für dich funktioniert. Die Website muss eine Kopie der Website sein, die bereits in der Anwendung enthalten ist. Du kannst keine Website mit einer anderen Struktur klonen.
 
-## Process
+## Vorgang
 
-[!badge variant="light" text="Step 1"] A name (completely arbitrary, this is what will be displayed in the app)
+[!badge variant="light" text="Schritt 1"] Einen Namen (kann willkürlich gewählt werden, dieser wird in der App angezeigt)
 
-[!badge variant="light" text="Step 2"] The clone site URL with `https://` at the front
+[!badge variant="light" text="Schritt 2"] Die URL der Klon-Seite mit "https://" am Anfang
 
-[!badge variant="light" text="Step 3"] A two letter [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) (this will dictate how the site is displayed and sorted within the app, just enter en if you are unsure)
+[!badge variant="light" text="Schritt 3"] Ein aus zwei Buchstaben bestehender [Sprachcode](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) (damit wird festgelegt, wie die Website in der App angezeigt und sortiert wird; gebe einfach "en" ein, wenn du dir unsicher bist)
 
 
 [!embed](https://www.youtube.com/watch?v=4tR58jyG9uQ)

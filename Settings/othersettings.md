@@ -1,10 +1,10 @@
 ---
-label: Other Settings
+label: Andere Einstellungen
 order: 800
 icon: kebab-horizontal
 ---
 
-## Sub/Dub Filter for Anime
+## Sub/Dub-Filter für Anime
 
 [!embed](https://www.youtube.com/watch?v=6CoQ6wwZVhw)
 

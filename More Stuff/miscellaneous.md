@@ -1,14 +1,14 @@
 ---
-label: Miscellaneous
+label: Sonstiges
 order: 90
 icon: kebab-horizontal
 ---
 
-## Installing Sorastream
+## Sorastream installieren
 
 [!embed](https://www.youtube.com/watch?v=yDuXGAnFQuI)
 
-!!!For Sorastream related FAQ, click [!badge variant="secondary" text="here"](/troubleshooting.md/#sorastream)
+!!!Für ein Sorastream bezogenes FAQ, klicke [!badge variant="secondary" text="hier"](/troubleshooting.md/#sorastream)
 !!!
 
 ___

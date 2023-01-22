@@ -1,74 +1,74 @@
 ---
-label: Troubleshooting
+label: Fehlerbehebung
 order: 700
 icon: tools
 ---
 
-## Backup error
+## Fehler bei der Sicherung
 
-!!!info If you are unable to create a backup.
-Change/reselect the download location.
-[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="/static/gear.png" text="Settings"] → [!badge variant="dark" icon="download" text="download path"] and then select a custom location.
+!!!info Wenn kein Backup erstellt werden kann.
+Speicherort ändern/wählen.
+[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="/static/gear.png" text="Einstellungen"] → [!badge variant="dark" icon="download" text="Downloadpfad"] und wähle einen benutzerdefinierten Speicherort.
 !!!
 
-## Restore backup error
+## Fehler beim Wiederherstellen des Backups
 
-!!!info If you are unable to read the backup file.
-Rename the extension of the file from `json to txt`. Now try again to read the backup file.
+!!!info Wenn die Sicherungsdatei nicht gelesen werden kann.
+Benenne die Dateiendung von "json" in "txt" um. Versuche nun erneut, die Sicherungsdatei einzulesen.
 !!!
 
-## Error: Out of memory
+## Fehler: Kein Speicherplatz verfügbar
 
-!!!info If the movie doesn't play showing an error saying out of memory.
-Change the video cache on disk. [!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="/static/gear.png" text="Settings"] → [!badge variant="dark" text="player"] > [!badge variant="dark" icon="server" text="video cache on disk"] and set a **lower amount of cache**.
+!!!info Wenn der Film nicht abgespielt wird und eine Fehlermeldung über fehlenden Speicherplatz erscheint.
+Den Video-Cache auf der Festplatte ändern. [!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="/static/gear.png" text="Einstellungen"] → [!badge variant="dark" text="Player"] > [!badge variant="dark" icon="server" text="Video-Cache in Speicher"] und stelle eine **geringere Menge an Cache** ein.
 !!!
 
-## Repositories/Extensions are not loading.
+## Repositories/Erweiterungen werden nicht geladen.
 
-!!!info If the repositories are not loading in [the official site](https://cloudstream.cf/repos/) or  [!badge variant="dark" text="Extension"] section.
-Do the process again using VPN connection.
+!!!info Wenn die Repositories im Bereich [der offiziellen Seite](https://cloudstream.cf/repos/) oder [!badge variant="dark" text="Erweiterungen"] nicht geladen werden.
+Versuche es über eine VPN-Verbindung erneut.
 !!!
 
-## Broken Subtitle
+## Untertitel fehlerhaft
 
-!!!info If the subtitles are broken while playing a video.
-[!badge variant="dark" text="Video player"] → [!badge variant="dark" text="sources"] → [!badge variant="dark" text="subtitles"] and click the [!badge variant="dark" text="Auto"] at the top. Now change the encode of the subtitle language.
+!!!info Bei der Wiedergabe eines Videos werden die Untertitel unterbrochen.
+[!badge variant="dark" text="Videoplayer"] → [!badge variant="dark" text="Quellen"] → [!badge variant="dark" text="Untertitel"] und klicke oben auf [!badge variant="dark" text="Auto"]. Ändere nun die Kodierung der Untertitelsprache.
 !!!
 
-## Subtitle casting issue
+##  Untertitel-Casting-Problem
 
-!!!info If subtitle isn't casting on the tv with the native casting system.
-Try casting using [this app](https://play.google.com/store/apps/details?id=com.instantbits.cast.webvideo).
-[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" text="Episode page"] → **Press and hold the epsiode** → [!badge variant="dark" text="play with Web Video Cast"] → **choose the link and then cast.** *The subtitle selection maybe not as good as cs3.*
+!!!info Wenn die Untertitel nicht mit dem systemeigenen Casting-System auf den Fernseher übertragen werden.
+Versuche es mit [dieser Anwendung](https://play.google.com/store/apps/details?id=com.instantbits.cast.webvideo).
+[!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" text="Episodenseite"] → **Drücken und halten der Episode** → [!badge variant="dark" text="Mit Web Video Cast wiedergeben"] → **Wähle den passenden Link und caste diesen.** Die Untertitelauswahl ist möglicherweise nicht so gut wie bei CS3.
 !!!
 
-## Safe mode on
+## Safe Mode an
 
-!!!info If the app turns on safe mode.
-clear the app cache and restart the app. You can also set a lower amount cache to avoid this issue.
-!!!danger This is a general troubleshooting. May not fix the issue. Then post it in the reports channel.
+!!!info Wenn die App in den abgesicherten Modus wechselt.
+Lösche den Cache der App und starte die App neu. Es kann auch eine kleinere Cache-Größe eingestellt werden, um dieses Problem zu vermeiden.
+!!!danger Dies ist eine allgemeine Fehlerbehebung. Unter Umständen wird das Problem dadurch nicht behoben. In diesem Fall poste es im Report-Channel.
 !!!
 
 ## Sorastream
 
-!!!info The episode loading is taking too long.
-As it scrapes a lot of sites, it takes time to load all of them. Skip loading after 3-5 seconds.
+!!!info Das Laden der Episode dauert zu lange.
+Da viele Seiten abgerufen werden, dauert es eine Weile, bis alle Seiten geladen sind. Überspringe das Laden nach 3-5 Sekunden.
 !!!
 
-!!!info Some sources are not loading.
-1. Sora has some geo restricted sources. Use a VPN to access those sources.
-2. Or, exo player can't handle the video. Use external player like VLC.
+!!!info Einige Quellen werden nicht geladen.
+1. Sora hat einige geobeschränkte Quellen. Verwende ein VPN, um auf diese Quellen zuzugreifen.
+2. Oder der Exo-Player kann das Video nicht abspielen. Benutze einen externen Player wie VLC.
 !!!
 
 
-!!!info Some titles are showing "No links found".
-Sora uses TMDb for catalogue, not the sources. So, it may show titles that no site has.
+!!!info Einige Titel zeigen "Keine Verlinkung gefunden".
+Sora verwendet TMDb für den Katalog, nicht für die Quellen. Daher kann es sein, dass Titel angezeigt werden, die keine der Seiten hat.
 !!!
 
-!!!info Some videos are not playing video/audio.
-EXO player can't handle the video. Use external player like VLC.
+!!!info Bei einigen Videos wird kein Video/Audio abgespielt.
+Der EXO-Player kann das Video nicht abspielen. Verwende einen externen Player wie z.B. VLC.
 !!!
 
-!!!info Video Download error.
-Try 1DM to download from Sorastream
+!!!info Fehler beim Herunterladen des Videos.
+Versuche 1DM für den Download von Sorastream.
 !!!
