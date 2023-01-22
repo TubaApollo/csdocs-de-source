@@ -5,11 +5,21 @@ icon: /static/linux.svg
 ---
 
 # Linux
+<<<<<<< HEAD
 Die App ist für Android, Android TV und FireTV Stick erhältlich. Leider ist sie nicht für IOS oder Desktop verfügbar, aber es können Tools wie [!badge variant="primary" size="l" icon="https://github.com/waydroid.png" text="Waydroid"](https://waydro.id/) oder [!badge variant="primary" size="l" icon="https://github.com/anbox.png" text="Anbox"](https://anbox.io/) verwendet werden, um Android auf Linux zu emulieren.
 
 # Waydroid
 <br />
 <br />
+=======
+You can download this app on Android, Android TV, and FireTV Stick. However, it is unfortunately not avaliable on IOS or on desktop, but you can use tools like [!badge variant="primary" size="l" icon="https://github.com/waydroid.png" text="Waydroid"](https://waydro.id/) or [!badge variant="primary" size="l" icon="https://github.com/anbox.png" text="Anbox"](https://anbox.io/) to emulate android apps on linux.
+
+<br />
+<br />
+
+<details>
+    <summary><img src="https://user-images.githubusercontent.com/68516357/213915851-16e76b00-d4b5-4324-8562-027c03979654.png" style="width: 50px;"/><h1> &nbsp; Waydroid<h1></summary>
+>>>>>>> 3f2bff280ea9bcaa267a4fc76e8d061ea52a2f3f
 
 <details>
     <summary><img src="https://user-images.githubusercontent.com/68516357/213915851-16e76b00-d4b5-4324-8562-027c03979654.png" style="width: 50px;"/><h1> &nbsp; Waydroid<h1></summary>
@@ -205,6 +215,7 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$
 
 in die entsprechende Datei `.zshenv` oder `.bashrc` oder `.profile` hinzu
 
+<<<<<<< HEAD
 - Starte das System neu
 
 </details>
@@ -214,3 +225,14 @@ in die entsprechende Datei `.zshenv` oder `.bashrc` oder `.profile` hinzu
 <details>
     <summary><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Anbox_logo.svg/120px-Anbox_logo.svg.png"  style="width: 45px;"/><h1> &nbsp; Anbox<h1></summary>
 </details>
+=======
+- reboot the system
+      
+</details>
+
+<br />
+ 
+<details>
+    <summary><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Anbox_logo.svg/120px-Anbox_logo.svg.png"  style="width: 45px;"/><h1> &nbsp; Anbox<h1></summary>
+</details>
+>>>>>>> 3f2bff280ea9bcaa267a4fc76e8d061ea52a2f3f
