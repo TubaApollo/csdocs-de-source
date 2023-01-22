@@ -47,7 +47,7 @@ Vendor OTA: `https://ota.waydro.id/vendor`
 sudo apt install curl ca-certificates -y
 ```
 
-- The Repo
+- Die Repo
 
 Füge die Repo zu der sources.list (für droidian & ubports kann dieser Schritt übersprungen werden)
 Ersetze DISTRO="jammy" mit deiner aktuellen Distro. (Optionen: focal, jammy, ubuntu-devel, bookworm, bullseye, sid)
