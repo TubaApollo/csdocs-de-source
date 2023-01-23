@@ -4,15 +4,11 @@ order: 998
 icon: /static/linux.svg
 ---
 
-# Linux
-Die App ist für Android, Android TV und FireTV Stick erhältlich. Leider ist sie nicht für IOS oder Desktop verfügbar, aber es können Tools wie [!badge variant="primary" size="l" icon="https://github.com/waydroid.png" text="Waydroid"](https://waydro.id/) oder [!badge variant="primary" size="l" icon="https://github.com/anbox.png" text="Anbox"](https://anbox.io/) verwendet werden, um Android auf Linux zu emulieren.
+# Emulation auf Linux
 
-# Waydroid
-<br />
-<br />
+==- [!badge variant="contrast" size="2xl" icon="/static/waydroid.png" text="**Waydroid**"]
 
-<details>
-    <summary><img src="https://user-images.githubusercontent.com/68516357/213915851-16e76b00-d4b5-4324-8562-027c03979654.png" style="width: 50px;"/><h1> &nbsp; Waydroid<h1></summary>
+!!!success GPU Requirements
 
 
 ## WayDroid installieren
@@ -75,7 +71,7 @@ Starte dann Waydroid über das Anwendungsmenü.
 
 ### GPU Anforderungen
 
-Waydroid funktioniert derzeit am besten mit Intel-GPUs. Sie sollten ohne weitere Modifikationen funktionieren.
+Waydroid funktioniert derzeit am besten mit **Intel-GPUs**. Sie sollten ohne weitere Modifikationen funktionieren.
 
 AMD-GPUs scheinen gemischte Ergebnisse zu haben (insbesondere die _RX 6800_ funktioniert nicht); wenn Waydroid _nicht_ funktioniert, möchtest du vielleicht auch die NVIDIA-Workarounds unten versuchen.
 
@@ -92,9 +88,74 @@ NVIDIA GPUs do _not_ work currently, but there are 2 workarounds:
         ```
 
     -   [Neustarten](https://wiki.archlinux.org/title/Restart "Starte") den `waydroid-container.service` neu.
+!!!  
+___
+## Fedora 36
+___
 
+!!!danger
+Kernels 5.18.18 to 5.19.5 are broken.
+!!!
 
-## Android-Anwendungen installieren und ausführen
+[!badge variant="light" text="Step 1"] Add the Copr repository
+
+```sh
+sudo dnf copr enable aleasto/waydroid
+```
+
+[!badge variant="light" text="Step 2"] Install waydroid
+
+```sh
+sudo dnf install waydroid
+```
+
+When launching waydroid from the application menu you'll be asked to initialize waydroid with some android images. Use the following links:
+
+System OTA: `https://ota.waydro.id/system`
+
+Vendor OTA: `https://ota.waydro.id/vendor`
+
+!!!warning
+This will download non-free components (ffmpeg, possibly others).
+!!!
+
+___
+## Ubuntu 22.04
+___
+
+[!badge variant="light" text="Step 1"] Install Pre-requisites
+
+```sh
+sudo apt install curl ca-certificates -y
+```
+
+[!badge variant="light" text="Step 2"] The Repo
+
+Add the repo to your sources.list (for droidian & ubports, this step can be skipped)
+Replace DISTRO="jammy" with your current target. Options: focal, jammy, ubuntu-devel, bookworm, bullseye, sid
+
+```sh
+export DISTRO="jammy"
+```
+
+```sh
+sudo curl --proto '=https' --tlsv1.2 -Sf https://repo.waydro.id/waydroid.gpg --output /usr/share/keyrings/waydroid.gpg && \
+echo "deb [signed-by=/usr/share/keyrings/waydroid.gpg] https://repo.waydro.id/ $DISTRO main" > ~/waydroid.list && \
+sudo mv ~/waydroid.list /etc/apt/sources.list.d/waydroid.list && \
+sudo apt update
+```
+
+[!badge variant="light" text="Step 3"] Install Waydroid
+
+```sh
+sudo apt install waydroid -y
+```
+
+Then start Waydroid from the applications menu.
+
+___
+## Install and Run Android Applications
+___
 
 Waydroid ist in der Lage, einige verschiedene Operationen durchzuführen, die mit dem Befehl waydroid app -h angezeigt werden:
 
@@ -126,8 +187,9 @@ Die apk-Dateien, die man manchmal im Internet finden, haben meist nur Arm-Unters
 
 Unter Umständen möchtest du [F-Droid](https://f-droid.org/) installieren, um Apps über ein grafisches Interface zu installieren. Beachte, dass der Google Play Store in dieser Form nicht funktioniert, da er auf den proprietären Google Play Services basiert, die nicht installiert sind.
 
+___
 ## Waydroid Eigenschaft-Optionen
-
+___
 Waydroid verwendet verschiedene Eigenschaften, um dem zugrunde liegenden Android-System mitzuteilen, wie es sich an einigen Stellen verhalten soll. Um dies zu tun, benutzen wir den Befehl `waydroid prop`. Um eine Eigenschaft zu deaktivieren,  `waydroid prop set <property> ""`
 
 ### Eigenschaften
@@ -140,17 +202,22 @@ Waydroid verwendet verschiedene Eigenschaften, um dem zugrunde liegenden Android
 - waydroid prop set persist.waydroid.width 0-9999 (int) Used for user to override desired resolution
 - waydroid prop set persist.waydroid.suspend true/false (bool) Keep Waydroid awake and do not let container sleep
 
+___
 ## Gemeinsamen Ordner einrichten
+___
 
+!!!dark
 Einrichten eines gemeinsamen Ordners zum Kopieren von Dateien aus `Quelle` zu `Ziel`.   
+!!!
 
 > `Quell-` Dateien sind dann vom `Ziel` abrufbar, aber nicht editierbar.
 ```sh
 sudo mount --bind <source> <target>
 ```
 
-> Wir werden den Ordner `host` einrichten, um Dateien vom Host zu kopieren, und den Ordner `droid`, um Dateien von Waydroid zu kopieren. 
-Beispiel:
+!!!dark
+Wir werden den Ordner `host` einrichten, um Dateien vom Host zu kopieren, und den Ordner `droid`, um Dateien von Waydroid zu kopieren. 
+!!!
 
 - Dateien von Linux nach Waydroid kopieren
     - auf Waydroid erstelle einen `/Waydroid/host` Ordner
@@ -174,28 +241,33 @@ mkdir ~/Waydroid/droid
 sudo mount --bind ~/.local/share/waydroid/data/media/0/Waydroid/droid ~/Waydroid/droid
 ```
 
+___
 ## Zwischenablage
+___
 
-> Ersetze `dnf` durch den entsprechenden Befehl für deine Distro.
-- Installiere pip
+!!!dark
+Ersetze `dnf` durch den entsprechenden Befehl für deine Distro.
+!!!
+
+[!badge variant="light" text="Schritt 1"] Installiere pip
 
 ```sh
 sudo dnf install pip
 ```
 
-- Installiere wl-clipboard
+[!badge variant="light" text="Schritt 2"]  Installiere wl-clipboard
 
 ```sh
 sudo dnf install wl-clipboard
 ```
 
-- Installiere pyclip
+[!badge variant="light" text="Schritt 3"] Installiere pyclip
 
 ```sh
 pip install --upgrade pip pyclip
 ```
 
-- füge `$HOME/.local/bin/`zu deinem $PATH hinzu
+[!badge variant="light" text="Schritt 4"] füge `$HOME/.local/bin/`zu deinem $PATH hinzu
 
 füge
 
@@ -205,12 +277,10 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$
 
 in die entsprechende Datei `.zshenv` oder `.bashrc` oder `.profile` hinzu
 
-- Starte das System neu
+[!badge variant="light" text="Schritt 5"] Starte das System neu
 
-</details>
+===
 
-<br />
-
-<details>
-    <summary><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Anbox_logo.svg/120px-Anbox_logo.svg.png"  style="width: 45px;"/><h1> &nbsp; Anbox<h1></summary>
-</details>
+==- [!badge variant="light" size="2xl" icon="https://github.com/anbox.png" text="**Anbox**"]
+Demnächst...
+===
