@@ -171,7 +171,7 @@ subaction:
     list                list installed applications
 ```
 
-Um eine App über CLI zu starten, sollten Sie den waydroid app launch <appname> Command verwenden:
+Um eine App über CLI zu starten, sollte der waydroid app launch <appname> Command verwendet werden:
 
 ```sh
 waydroid app launch xyz.apk
