@@ -14,9 +14,9 @@ ___
 
 [!badge variant="light" text="Schritt 2"] Installiere die [!badge variant="secondary" icon="repo" text="Repositories"](Repositories.md)
 
-[!badge variant="light" text="Step 3"] Gehe zu **[!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Einstellungen"] → [!badge variant="dark" icon="" text="Erweiterungen"] → [!badge variant="dark" icon="" text="Deine installierten Repositories"]** und installiere die gewünschten Erweiterungen.
+[!badge variant="light" text="Schritt 3"] Gehe zu **[!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Einstellungen"] → [!badge variant="dark" icon="" text="Erweiterungen"] → [!badge variant="dark" icon="" text="Deine installierten Repositories"]** und installiere die gewünschten Erweiterungen.
 
-[!badge variant="light" text="Step 4"] Gehe zurück zu [!badge variant="dark" icon="home" text="Startseite"] und klicke die [!badge variant="dark" icon="filter" text="None"] Schaltfläche, welche sich unten rechts befindet. Wähle dann die Kategorie der installierten Erweiterung und anschließend die Erweiterung aus.
+[!badge variant="light" text="Schritt 4"] Gehe zurück zu [!badge variant="dark" icon="home" text="Startseite"] und klicke die [!badge variant="dark" icon="filter" text="None"] Schaltfläche, welche sich unten rechts befindet. Wähle dann die Kategorie der installierten Erweiterung und anschließend die Erweiterung aus.
 
 [!embed](https://youtu.be/u8h1rUZUYaA)
 ___
@@ -26,7 +26,7 @@ Es können Repositories auch mit Kurzcodes installiert werden.
 
 [!badge variant="light" text="Schritt 1"] Kopiere die Kurzcodes aus [!badge variant="secondary" icon="repo" text="Repositories"](Repositories.md)
 
-[!badge variant="light" text="Step 2"] Kopiere den Code in [!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Einstellungen"] → [!badge variant="dark" icon="" text="Erweiterungen"] → [!badge variant="dark" icon="plus" text="Repository hinzufügen"] → [!badge variant="dark" icon="" text="Repository-URL"] und klicke[!badge variant="dark" icon="plus" text="Repository hinzufügen"]
+[!badge variant="light" text="Schritt 2"] Kopiere den Code in [!badge variant="dark" icon="static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="static/gear.png" text="Einstellungen"] → [!badge variant="dark" icon="" text="Erweiterungen"] → [!badge variant="dark" icon="plus" text="Repository hinzufügen"] → [!badge variant="dark" icon="" text="Repository-URL"] und klicke[!badge variant="dark" icon="plus" text="Repository hinzufügen"]
 
 [!embed](https://youtu.be/d9veQGxHnsI)
 
