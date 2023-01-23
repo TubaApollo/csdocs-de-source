@@ -74,7 +74,7 @@ Falls du deine Daten sichern willst, erstelle eine Sicherung von dieser Datei </
 Die VHDX-Datei wird wieder in diesen Ordner eingefügt </br> `%LOCALAPPDATA%\Packages\MicrosoftCorporationII.WindowsSubsystemForAndroid_8wekyb3d8bbwe\LocalCache` .
 
 ___
-## Uninstallation
+## Deinstallation
 
 1. Zum Startmenü gehen
 2. Suche nach `Windows-Subsystem für Android™`
