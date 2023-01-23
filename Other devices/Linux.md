@@ -94,45 +94,45 @@ ___
 ___
 
 !!!danger
-Kernels 5.18.18 to 5.19.5 are broken.
+Kernel 5.18.18 bis 5.19.5 funktionieren nicht.
 !!!
 
-[!badge variant="light" text="Step 1"] Add the Copr repository
+[!badge variant="light" text="Schritt 1"] Copr-Repositorys hinzufügen
 
 ```sh
 sudo dnf copr enable aleasto/waydroid
 ```
 
-[!badge variant="light" text="Step 2"] Install waydroid
+[!badge variant="light" text="Schritt 2"] Waydroid installieren
 
 ```sh
 sudo dnf install waydroid
 ```
 
-When launching waydroid from the application menu you'll be asked to initialize waydroid with some android images. Use the following links:
+Wenn du Waydroid über das Anwendungsmenü startest, wirst du aufgefordert, Waydroid mit einigen Android-Images zu initialisieren. Verwende die folgenden Links:
 
 System OTA: `https://ota.waydro.id/system`
 
 Vendor OTA: `https://ota.waydro.id/vendor`
 
 !!!warning
-This will download non-free components (ffmpeg, possibly others).
+Dadurch werden proprietäre Komponenten heruntergeladen (ffmpeg, eventuell andere).
 !!!
 
 ___
 ## Ubuntu 22.04
 ___
 
-[!badge variant="light" text="Step 1"] Install Pre-requisites
+[!badge variant="light" text="Schritt 1"] Installationsvoraussetzungen
 
 ```sh
 sudo apt install curl ca-certificates -y
 ```
 
-[!badge variant="light" text="Step 2"] The Repo
+[!badge variant="light" text="Schritt 2"] Die Repo
 
-Add the repo to your sources.list (for droidian & ubports, this step can be skipped)
-Replace DISTRO="jammy" with your current target. Options: focal, jammy, ubuntu-devel, bookworm, bullseye, sid
+Füge die Repo zu deiner sources.list hinzu (für droidian & ubport Nutzer kann dieser Schritt übersprungen werden)
+Ersetze DISTRO="jammy" mit der entsprechenden Distro. Options: focal, jammy, ubuntu-devel, bookworm, bullseye, sid
 
 ```sh
 export DISTRO="jammy"
@@ -145,16 +145,16 @@ sudo mv ~/waydroid.list /etc/apt/sources.list.d/waydroid.list && \
 sudo apt update
 ```
 
-[!badge variant="light" text="Step 3"] Install Waydroid
+[!badge variant="light" text="Step 3"] Waydroid installieren
 
 ```sh
 sudo apt install waydroid -y
 ```
 
-Then start Waydroid from the applications menu.
+Dann Waydroid über das Anwendungsmenü starten.
 
 ___
-## Install and Run Android Applications
+## Android-Anwendungen installieren und ausführen
 ___
 
 Waydroid ist in der Lage, einige verschiedene Operationen durchzuführen, die mit dem Befehl waydroid app -h angezeigt werden:
@@ -194,13 +194,13 @@ Waydroid verwendet verschiedene Eigenschaften, um dem zugrunde liegenden Android
 
 ### Eigenschaften
 
-- waydroid prop set persist.waydroid.multi_windows true/false (bool) Enables/Disables persistent freeform window mode
-- waydroid prop set persist.waydroid.invert_colors true/false (bool) Swaps the color space from RGBA to BGRA (only works with our patched mutter so far)
-- waydroid prop set persist.waydroid.height_padding 0-9999 (int) Adjust Height padding (30 will allow you to use navbar on mobile)
-- waydroid prop set persist.waydroid.width_padding 0-9999 (int) Adjust width padding
-- waydroid prop set waydroid.display_width 0-9999 (int) (auto-generated) Auto generated size of Waydroid screen
-- waydroid prop set persist.waydroid.width 0-9999 (int) Used for user to override desired resolution
-- waydroid prop set persist.waydroid.suspend true/false (bool) Keep Waydroid awake and do not let container sleep
+- waydroid prop set persist.waydroid.multi_windows true/false (bool) Aktiviert/Deaktiviert den dauerhaften Freiform-Fenstermodus
+- waydroid prop set persist.waydroid.invert_colors true/false (bool) Wechselt den Farbraum von RGBA zu BGRA (funktioniert bisher nur mit der gepatchten Anwendung)
+- waydroid prop set persist.waydroid.height_padding 0-9999 (int) Höhenpolsterung anpassen (30 ermöglicht die Verwendung der Navigationsleiste auf dem Handy)
+- waydroid prop set persist.waydroid.width_padding 0-9999 (int) Breitenpolsterung anpassen
+- waydroid prop set waydroid.display_width 0-9999 (int) (automatisch generiert) Automatisch generierte Größe des Waydroid-Bildschirms
+- waydroid prop set persist.waydroid.width 0-9999 (int) Der Benutzer kann die gewünschte Auflösung überschreiben.
+- waydroid prop set persist.waydroid.suspend true/false (bool) Waydroid und Container wach halten
 
 ___
 ## Gemeinsamen Ordner einrichten
