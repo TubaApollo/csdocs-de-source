@@ -17,16 +17,16 @@ icon: /static/win11.png
 ___
 |     [!badge variant="primary" size="l" icon="/static/win11.svg" text="Windows 11"]    |    [!badge variant="primary" size="l" icon="/static/win10.svg" text="Windows 10"]  { class="compact" }     |
 |:-------------------------:|:-----------------------:|
-| **RAM**: 6 GB (minimum) and 16 GB (recommended).| **RAM**: 6 GB (minimum) and 16 GB (recommended).|
-| **Build**: 22000.526 or higher.| **Build**: 22H2 10.0.19045.2311 or higher.|
-| - Partition: NTFS <br /> Windows Subsystem For Android™ can only be installed on a NTFS partition, not on an exFAT partition |- Partition: NTFS <br /> Windows Subsystem For Android™ can only be installed on a NTFS partition, not on an exFAT partition|
+| **RAM**: 6 GB (minimum) und 16 GB (empfohlen).| **RAM**: 6 GB (minimum) und 16 GB (empfohlen).|
+| **Build**: 22000.526 oder höher.| **Build**: 22H2 10.0.19045.2311 oder höher.|
+| - Partition: NTFS <br /> Windows Subsystem für Android™ can only be installed on a NTFS partition, not on an exFAT partition |- Partition: NTFS <br /> Windows Subsystem For Android™ can only be installed on a NTFS partition, not on an exFAT partition|
 |- GPU: Any compatible Intel, AMD or Nvidia GPU <br /> GPU Performance may vary depending on its compatibility with Windows Subsystem For Android™ <br /><br />Nvidia GPUs are known to cause problems. If Windows Subsystem For Android™ does not start or there are graphical glitches when an Nvidia GPU is used, [follow this guide](https://github.com/MustardChef/WSABuilds/blob/master/Guides/ChangingGPU.md) to switch to another iGPU/dGPU/eGPU  that you may have or Microsoft Basic Renderer|- GPU: Any compatible Intel, AMD or Nvidia GPU <br /> GPU Performance may vary depending on its compatibility with Windows Subsystem For Android™ <br /><br />Nvidia GPUs are known to cause problems. If Windows Subsystem For Android™ does not start or there are graphical glitches when an Nvidia GPU is used, [follow this guide](https://github.com/MustardChef/WSABuilds/blob/master/Guides/ChangingGPU.md) to switch to  another iGPU/dGPU/eGPU  that you may have or Microsoft Basic Renderer|
 | The Computer must support virtualization and be enabled in BIOS/UEFI and Optional Features. [**Guide for this process.**](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1)| The Computer must support virtualization and be enabled in BIOS/UEFI and Optional Features. [**Guide for this process.**](https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1)|
 
 ___
 ## Installation
 
-!!!warning Um MagiskOnWSA verwenden zu können, muss das offizielle WSA [vollständig deinstalliert](#uninstallation) werden.
+!!!warning Um MagiskOnWSA verwenden zu können, muss das offizielle WSA [vollständig deinstalliert](#deinstallation) werden.
 !!!
 
 [!badge variant="light" text="Schritt 1"] **Lade die WSA** Zip-Datei von [!badge variant="secondary" text="hier"](https://github.com/MustardChef/WSABuilds#downloads) herunter
