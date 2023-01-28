@@ -3,13 +3,13 @@ label: Sonstiges
 order: 90
 icon: kebab-horizontal
 ---
-## Terms
+## Begriffe
 
-**Repository**: Contains all the extensions/sites.
+**Repository**: Enthält alle Erweiterungen/Seiten.
 
-**Extension/Source/Site**: Contains all the videos/servers of a site.
+**Erweiterung/Quelle/Seite**: Enthält alle Videos/Server einer Website.
 
-**Server**: Hosts the videos.
+**Server**: Hostet die Videos.
 
 
 ## Sorastream installieren

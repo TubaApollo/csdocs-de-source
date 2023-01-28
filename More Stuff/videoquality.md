@@ -1,81 +1,81 @@
 ---
-label: Video Quality Tags
+label: Encoder-Tags Bedeutung
 order: 500
 icon: video
 ---
 
 ## x264 vs x265
-x264 and x265 are both video codecs that are used for compressing video files. They are both open-source and are widely supported by various media players and devices.
+x264 und x265 sind zwei Videocodecs, die zur Komprimierung von Videodateien verwendet werden. Beide sind Open-Source-Codecs und werden von einer Vielzahl von Mediaplayern und Geräten unterstützt.
 
-x264 is a codec that uses the H.264 standard for compression. H.264 is a widely adopted video compression standard that provides good video quality at relatively low bitrates. It is commonly used for encoding video files for a variety of purposes, including streaming, broadcasting, and storage.
+x264 ist ein Codec, der den H.264-Standard zur Komprimierung verwendet. H.264 ist ein weit verbreiteter Videokomprimierungsstandard, der eine gute Videoqualität bei relativ niedrigen Bitraten bietet. Er wird häufig zur Kodierung von Videodateien für verschiedene Zwecke wie Streaming, Broadcasting und Speicherung verwendet.
 
-x265, on the other hand, is a codec that uses the H.265 (HEVC) standard for compression. H.265 is a more advanced standard than H.264 and it allows for better compression, meaning that video files can be smaller while still maintaining the same level of quality. It also supports higher resolutions like 4K and 8K. However, some devices may not be able to play H.265 encoded videos.
+x265 hingegen ist ein Codec, der den Standard H.265 (HEVC) zur Komprimierung verwendet. H.265 ist ein fortschrittlicherer Standard als H.264 und ermöglicht eine bessere Komprimierung, was bedeutet, dass Videodateien ohne Qualitätsverlust kleiner sein können. Er unterstützt auch höhere Auflösungen wie 4K und 8K. Allerdings können einige Geräte H.265-kodierte Videos möglicherweise nicht abspielen.
 
-!!!light Summary
-x264 is a codec that uses H.264 standard and x265 uses H.265 standard for compression. x265 will provide better compression and higher resolution support but it requires more computational power. x264 is more widely supported and can be played on more devices, but the video quality may not be as good for the same bitrate.
+!!!light Zusammenfassung
+x264 ist ein Codec, der den H.264-Standard verwendet, während x265 den H.265-Standard zur Komprimierung verwendet. x265 bietet eine bessere Komprimierung und unterstützt höhere Auflösungen, benötigt aber mehr Rechenleistung. x264 wird häufiger unterstützt und kann auf mehr Geräten abgespielt werden, aber die Videoqualität kann bei gleicher Bitrate schlechter sein.
 !!!
 
 ## WEB-DL vs WEB-Rip
-WEB-DL stands for "Web-Download." It is a term used to describe a type of video file that has been downloaded from the internet, as opposed to being bought on a physical medium like a DVD or Blu-ray. WEB-DL files are typically high-quality versions of movies or TV shows that have been downloaded from streaming services or torrent websites. These files are usually in the format of .mkv or .mp4 and have been compressed using a codec such as x264 or x265. The quality of WEB-DL files can be higher than that of standard definition (SD) or even high definition (HD) files, as they are usually sourced from the original high-definition master.
+WEB-DL ist die Abkürzung für "Web-Download". Der Begriff bezeichnet eine Art von Videodatei, die aus dem Internet heruntergeladen und nicht auf einem physischen Datenträger wie DVD oder Blu-ray gekauft wurde. WEB-DL-Dateien sind in der Regel qualitativ hochwertige Versionen von Filmen oder Fernsehsendungen, die von Streaming-Diensten oder Torrent-Websites heruntergeladen werden. Diese Dateien haben in der Regel das Format .mkv oder .mp4 und wurden mit einem Codec wie x264 oder x265 komprimiert. Die Qualität von WEB-DL-Dateien kann höher sein als die von Standard-Definition (SD)- oder sogar High-Definition (HD)-Dateien, da sie in der Regel vom ursprünglichen High-Definition-Master stammen.
 
-WEBRip is a type of video file that is typically sourced from a streaming service, such as Netflix or Amazon Prime, and then recorded and re-encoded by an individual. Because the video is recorded and re-encoded, the quality may vary and it may not be as high as the original source.
+WEBRip ist eine Art von Videodatei, die normalerweise von einem Streaming-Dienst wie Netflix oder Amazon Prime stammt und dann von einer Einzelperson aufgenommen und neu kodiert wird. Da das Video aufgenommen und neu kodiert wird, kann die Qualität variieren und möglicherweise nicht so gut sein wie die der Originalquelle.
 
-!!!light Summary
-WEBRip is a type of video file that is typically sourced from a streaming service and then recorded and re-encoded by an individual, whereas WEB-DL is a term used to describe a type of video file that has been downloaded directly from the internet and the quality is typically higher than WEBRip.
+!!!light Zusammenfassung
+WEB-DL ist ein Begriff, der verwendet wird, um eine Art von Videodatei zu beschreiben, die direkt aus dem Internet heruntergeladen wird und deren Qualität in der Regel höher ist als die von einem WEBRip.
 !!!
 
 ## REMUX vs DVD-Rip
-A remux is a type of video file that is a remastered version of the original source. It takes the video and audio streams from the original source and puts them into a new container format, such as MKV or MP4, without changing the compression or encoding of the streams. This means that the quality of the video and audio is exactly the same as the original source. The main advantage of a remux is that it allows for better compatibility with different media players and devices, as well as smaller file sizes.
+Ein Remux ist eine Art von Videodatei, die eine überarbeitete Version der Originalquelle darstellt. Dabei werden die Video- und Audioströme der Originalquelle in ein neues Containerformat wie MKV oder MP4 übertragen, ohne dass die Komprimierung oder Codierung der Spuren geändert wird. Das bedeutet, dass die Video- und Audioqualität exakt der Originalquelle entspricht. Der Hauptvorteil eines Remux besteht in der besseren Kompatibilität mit verschiedenen Mediaplayern und Geräten sowie in der geringeren Dateigröße.
 
-A DVDrip, on the other hand, is a type of video file that is typically created by ripping the video and audio streams from a DVD. The compression and encoding of the streams may be changed during the ripping process, which can result in a loss of quality. DVDrip files are usually in the format of AVI or MP4 and have a lower resolution than the original DVD.
+Ein DVD-Rip hingegen ist eine Art Videodatei, die in der Regel durch Rippen der Video- und Audioströme einer DVD erstellt wird. Die Komprimierung und Kodierung der Spuren kann während des Rippens geändert werden, was zu einem Qualitätsverlust führen kann. DVDrip-Dateien sind in der Regel im AVI- oder MP4-Format und haben eine geringere Auflösung als die Original-DVD.
 
-!!!light Summary
-A remux is a type of video file that is a remastered version of the original source and it keeps the same quality and just change the container format, whereas a DVDrip is a type of video file that is typically created by ripping the video and audio streams from a DVD, which may result in a loss of quality.
+!!!light Zusammenfassung
+Ein Remux ist eine Videodatei, bei der es sich um eine neu gemasterte Version der Originalquelle handelt, die die gleiche Qualität beibehält und nur das Containerformat ändert. Im Gegensatz dazu ist ein DVDrip eine Videodatei, die normalerweise durch Rippen der Video- und Audiospuren von einer DVD erstellt wird, was zu einem Qualitätsverlust führen kann.
 !!!
 
 ## Blu-ray
-Blu-ray video quality is a high-definition video standard that offers a higher resolution and better picture quality than standard definition (SD) or even high-definition (HD) video. Blu-ray video typically has a resolution of 1920x1080 pixels (1080p) and it can also support 4K resolution (3840x2160 pixels) and 8K resolution (7680x4320 pixels).
+Blu-ray-Videoqualität ist ein High-Definition-Videostandard, der eine höhere Auflösung und eine bessere Bildqualität als Standard Definition (SD) oder sogar High Definition (HD) Video bietet. Blu-ray-Videos haben in der Regel eine Auflösung von 1920x1080 Pixeln (1080p), können aber auch 4K-Auflösungen (3840x2160 Pixel) und 8K-Auflösungen (7680x4320 Pixel) unterstützen.
 
-The picture quality of Blu-ray video is typically much sharper and more detailed than that of SD or HD video. It has a wider range of colors, brightness, and contrast, which allows for more lifelike and vibrant images. It also supports lossless surround sound audio codecs such as DTS-HD Master Audio, Dolby TrueHD, and more.
+Die Bildqualität von Blu-ray-Videos ist in der Regel viel schärfer und detailreicher als die von SD- oder HD-Videos. Sie verfügt über einen größeren Farb-, Helligkeits- und Kontrastbereich, was zu realistischeren und lebendigeren Bildern führt. Außerdem unterstützt sie verlustfreie Surround-Sound-Audio-Codecs wie DTS-HD Master Audio, Dolby TrueHD und andere.
 
-Blu-ray video also supports a variety of advanced features such as interactive menus, subtitles, and multiple audio tracks. Additionally, Blu-ray players usually have built-in hardware decoders for advanced video codecs such as H.264, VC-1 and MPEG-4, which allows for smoother playback of video content.
+Blu-ray-Video unterstützt auch eine Reihe erweiterter Funktionen wie interaktive Menüs, Untertitel und mehrere Tonspuren. Darüber hinaus verfügen Blu-ray-Player in der Regel über integrierte Hardware-Decoder für erweiterte Videocodecs wie H.264, VC-1 und MPEG-4, die eine flüssigere Wiedergabe von Videoinhalten ermöglichen.
 
-!!!light Summary
-Blu-ray video quality is a high-definition video standard that offers a higher resolution and better picture quality than standard definition (SD) or even high-definition (HD) video, it also supports lossless surround sound audio codecs and advanced features such as interactive menus, subtitles, and multiple audio tracks.
+!!!light Zusammenfassung
+Blu-ray-Videoqualität Quality ist ein hochauflösender Videostandard, der eine höhere Auflösung und eine bessere Bildqualität als Standard Definition (SD) oder sogar High Definition (HD) Video bietet. Außerdem unterstützt er verlustfreie Surround-Sound-Audio-Codecs und erweiterte Funktionen wie interaktive Menüs, Untertitel und mehrere Tonspuren.
 !!!
 
 ## DS4K
-DS4K stands for "Downscaled 4K." It is a video resolution where a 4K (Ultra High Definition) video is downscaled to a lower resolution, such as 1080p (Full HD) for streaming or distribution purposes. OTT providers often compress their 4K contents poorly to manage their server traffic. That's why encoders downscale the 4K version with good bitrate, sharpness, details, etc. The quality of a DS4K video depends on the encoder.
+DS4K ist die Abkürzung für "Downscaled 4K". Dabei handelt es sich um eine Videoauflösung, bei der ein 4K-Video (Ultra High Definition) für Streaming- oder Vertriebszwecke auf eine niedrigere Auflösung wie 1080p (Full HD) herunterskaliert wird. OTT-Anbieter komprimieren ihre 4K-Inhalte oft schlecht, um die Bandbreite zu verringern und den Server-Traffic zu bewältigen. Daher skalieren Encoder die 4K-Version mit guter Bitrate, Schärfe, Details usw. herunter. Die Qualität eines DS4K-Videos hängt vom Encoder ab.
 
 ## SDR vs HDR vs HDR10 vs HDR10+
 
 ### SDR
-SDR (Standard Dynamic Range) is the standard for displaying images on most traditional displays, such as TVs and computer monitors. SDR images have a limited range of brightness and color, and typically look less vibrant and realistic compared to HDR (High Dynamic Range) images.
+SDR (Standard Dynamic Range) ist der Standard für die Anzeige von Bildern auf den meisten herkömmlichen Bildschirmen, wie Fernsehern und Computermonitoren. SDR-Bilder haben einen begrenzten Helligkeits- und Farbbereich und wirken im Vergleich zu HDR-Bildern (High Dynamic Range) in der Regel weniger lebendig und realistisch.
 
 ### HDR
-HDR (High Dynamic Range) is a newer technology that enhances the brightness, contrast, and color range of images, resulting in more vivid and realistic images. HDR images have a wider range of brightness and color than SDR images, and they can display brighter whites and darker blacks.
+HDR (High Dynamic Range) ist eine neuere Technologie, die die Helligkeit, den Kontrast und den Farbbereich von Bildern verbessert, was zu lebendigeren und realistischeren Bildern führt. HDR-Bilder haben einen größeren Helligkeits- und Farbbereich als SDR-Bilder und können hellere Weißtöne und dunklere Schwarztöne darstellen.
 
-HDR10 and HDR10+ are both HDR video formats, but they have some differences.
+HDR10 und HDR10+ sind beides HDR-Videoformate, die sich jedoch in einigen Punkten unterscheiden.
 
 ### HDR10
-HDR10 is an open, industry-standard HDR format that is supported by most HDR-enabled TVs and devices. It uses static metadata to define the maximum and minimum brightness levels of an image, and this metadata is embedded in the video.
+HDR10 ist ein offener Industriestandard für das HDR-Format, der von den meisten HDR-fähigen Fernsehern und Geräten unterstützt wird. Es verwendet statische Metadaten, um die maximalen und minimalen Helligkeitswerte eines Bildes zu definieren, und diese Metadaten werden in das Video eingebettet.
 
 ### HDR10+
-HDR10+ is a newer HDR format that is developed by Samsung and it uses dynamic metadata, which can adjust the brightness and color levels on a scene-by-scene or even frame-by-frame basis. This allows for more accurate and consistent HDR images, and it can provide a more immersive viewing experience. However, it is not as widely supported as HDR10 and it's only supported by some Samsung and Panasonic TVs and devices.
+HDR10+ ist ein neueres HDR-Format, das von Samsung entwickelt wurde. Es verwendet dynamische Metadaten, die die Helligkeits- und Farbwerte Szene für Szene oder sogar Bild für Bild anpassen können. Dies ermöglicht genauere und konsistentere HDR-Bilder und kann zu einem intensiveren Seherlebnis führen. Es ist jedoch nicht so weit verbreitet wie HDR10 und wird nur von einigen Fernsehern und Geräten von Samsung und Panasonic unterstützt.
 
-!!!light Summary
-SDR is the standard for displaying images on most traditional displays, HDR enhances the brightness, contrast, and color range of images, HDR10 is an open, industry-standard HDR format and HDR10+ is a newer HDR format developed by Samsung that uses dynamic metadata for more accurate and consistent HDR images.
+!!!light Zusammenfassung
+SDR ist der Standard für die Darstellung von Bildern auf den meisten herkömmlichen Bildschirmen, HDR verbessert die Helligkeit, den Kontrast und den Farbumfang von Bildern, HDR10 ist ein offenes, branchenübliches HDR-Format und HDR10+ ist ein neueres, von Samsung entwickeltes HDR-Format, das dynamische Metadaten für genauere und konsistentere HDR-Bilder verwendet.
 !!!
 
 ## Dolby Vision
-Dolby Vision is a high-dynamic-range (HDR) video format developed by Dolby Laboratories. It is designed to provide a more immersive viewing experience by expanding the range of colors and brightness levels that can be displayed on screen.
+Dolby Vision ist ein von Dolby Laboratories entwickeltes HDR-Videoformat (High Dynamic Range). Es soll ein intensiveres Seherlebnis ermöglichen, indem es die Palette der auf dem Bildschirm darstellbaren Farben und Helligkeitsstufen erweitert.
 
-Dolby Vision uses a combination of hardware and software to process video content, allowing it to display a wider range of colors and brightness levels than standard dynamic range (SDR) video. It also uses a technique called "dynamic metadata" which allows the color and brightness to be adjusted on a scene-by-scene or even frame-by-frame basis, rather than a static adjustment for the entire movie or TV show.
+Dolby Vision verwendet eine Kombination aus Hardware und Software, um Videoinhalte so zu verarbeiten, dass ein breiteres Spektrum an Farben und Helligkeitsstufen angezeigt werden kann als bei Videos mit Standard-Dynamikumfang (SDR). Darüber hinaus wird eine Technik namens "dynamische Metadaten" verwendet, die es ermöglicht, Farbe und Helligkeit Szene für Szene oder sogar Bild für Bild anzupassen, anstatt eine statische Anpassung für den gesamten Film oder die gesamte Fernsehsendung vorzunehmen.
 
-Dolby Vision is compatible with a wide range of devices, including televisions, streaming devices, and Ultra HD Blu-ray players, and it is supported by many streaming services and content providers.
+Dolby Vision ist mit einer Vielzahl von Geräten kompatibel, darunter Fernsehgeräte, Streaming-Geräte und Ultra HD Blu-ray-Player, und wird von vielen Streaming-Diensten und Inhalteanbietern unterstützt.
 
-Keep in mind that to fully experience Dolby Vision, both the content and the playback device must be Dolby Vision compatible. Some devices only support Dolby Vision on streaming and not on physical media.
+Bitte beachte, dass sowohl der Inhalt als auch das Wiedergabegerät Dolby Vision-kompatibel sein müssen, damit du Dolby Vision in vollem Umfang genießen kannst. Einige Geräte unterstützen Dolby Vision nur beim Streaming und nicht auf physischen Medien.
 
-!!!light Summary
-Dolby Vision is an HDR video format that enhances the range of colors and brightness levels on screen. It uses advanced processing techniques to improve the viewing experience and is compatible with a wide range of devices and supported by many streaming services. To fully experience Dolby Vision, both the content and the playback device must be Dolby Vision compatible.
+!!!light Zusammenfassung
+Dolby Vision ist ein HDR-Videoformat, das die Farbpalette und Helligkeit auf dem Bildschirm verbessert. Es nutzt fortschrittliche Verarbeitungstechniken zur Verbesserung des Seherlebnisses und ist mit einer Vielzahl von Geräten kompatibel und wird von vielen Streaming-Diensten unterstützt. Um Dolby Vision in vollem Umfang erleben zu können, müssen sowohl die Inhalte als auch das Wiedergabegerät Dolby Vision-kompatibel sein.
 !!!
