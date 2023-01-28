@@ -24,4 +24,4 @@ Die Stremio-Erweiterung ist noch experimentell. Erwarte kein Stremio-ähnliches 
 
 [!badge variant="light" text="Schritt 7"] Ersetze den Anfang des Links `stremio://` durch `https://` und entferne `manifest.json` am Ende des Links
 
-[!embed](https://www.youtube.com/watch?v=DLCSVxSBfxA)
+[!embed](https://www.youtube-nocookie.com/embed/DLCSVxSBfxA)

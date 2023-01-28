@@ -17,5 +17,5 @@ Wenn der Player nicht in der Liste erscheint, klicke auf [!badge variant="dark" 
 ## Externen Player als Standard festlegen
 [!badge variant="dark" icon="/static/base.png" text="Cloudstream"] → [!badge variant="dark" icon="/static/gear.png" text="Einstellungen"] → [!badge variant="dark" text="Player"] → [!badge variant="dark" icon="play" text="Bevorzugter Videoplayer"] → [!badge variant="dark" text="Wähle deinen Videoplayer aus"]
 
-[!embed](https://www.youtube.com/watch?v=cXj9CAEf-Ys)
+[!embed](https://www.youtube-nocookie.com/embed/cXj9CAEf-Ys)
 

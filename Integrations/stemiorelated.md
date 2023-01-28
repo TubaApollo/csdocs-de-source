@@ -4,20 +4,20 @@ order: 996
 icon: /static/stremio.png
 ---
 
-# Stremio addon
+# Stremio-Erweiterung
 
-!!! warning **Read this before installing**
-Die Stremio-Erweiterung ist noch experimentell. Erwarte kein Stremio-ähnliches Erlebnis. Quellen können in CS3 mit dieser Methode hinzugefügt werden, aber nur für die Bibliothek. Wenn also versucht wird, die Episoden abzuspielen, kommt die Meldung **Keine Verlinkung gefunden**.
+!!! warning **Vor dem Start lesen**
+Die Stremio-Erweiterung ist noch experimentell. Erwarte kein Stremio-ähnliches Erlebnis. Quellen können in CS3 mit dieser Methode hinzugefügt werden, aber nur für die Bibliothek. Wenn also versucht wird, die Episoden abzuspielen, kommt die Meldung **Keine Verlinkung gefunden**. **Hiermit können keine Torrent-Dateien gestreamt werden.**
 !!!
 
-## Installing Stremio
+## Installation von Stremio
 
 [!badge variant="light" text="Schritt 1"] Navigiere zu der [Repo-Seite](https://www.cloudstream.cf/repos) und installiere die [English repo](cloudstreamrepo://raw.githubusercontent.com/recloudstream/cloudstream-extensions/builds/repo.json)
 
 [!badge variant="light" text="Schritt 2"] öffne **Cloudstream**, gehe zu [!badge variant="dark" icon="/static/gear.png" text="Einstellungen"] → [!badge variant="dark" text="Erweiterungen"] → [!badge variant="dark" text="English Repository"] → **wische hinüber zu** [!badge variant="dark" text="Andere"] und **Installiere das Stremio-Plugin**
 
 ___
-## Stremio-Addon erhalten
+## Stremio-Erweiterung herunterladen
 
 [!badge variant="light" text="Schritt 3"] Gehe zurück zu deinem Webbrowser und navigiere zu [Stremio addon list](https://stremio-addons.netlify.app/).
 
@@ -38,4 +38,4 @@ ___
 
 [!badge variant="light" text="Schritt 8"] Nach dem Neustart von Cloudstream klicke auf **None** (Die Schaltfläche zum Wechseln des Anbieters), klicke unten auf **Andere**, und das neue Addon sollte erscheinen.
 
-[!embed](https://www.youtube.com/watch?v=iHZENk0MKXs)
+[!embed](https://www.youtube-nocookie.com/embed/iHZENk0MKXs)

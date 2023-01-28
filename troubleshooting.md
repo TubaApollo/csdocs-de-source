@@ -72,3 +72,53 @@ Der EXO-Player kann das Video nicht abspielen. Verwende einen externen Player wi
 !!!info Fehler beim Herunterladen des Videos.
 Versuche 1DM für den Download von Sorastream.
 !!!
+
+## WSA
+
+!!!info Install.ps1 is not recognized/missing
+
+![](https://media.discordapp.net/attachments/1044322950725259274/1068243571544690719/9Qf3veK.png)
+
+ If the popup windows disappear without asking administrative permission and Windows Subsystem For Android™ is not installed successfully, you should manually run Install.ps1 as administrator:
+      
+1. Press Win+x and select Windows™ Terminal (Admin)
+      
+2. Input the command below and press enter, replacing {X:\path\to\your\extracted\folder} including the {} with the path of the extracted folder
+    ```Powershell
+        cd "{X:\path\to\your\extracted\folder}"
+     ```  
+        
+3. Input the command below and press enter   
+    ```Powershell
+        PowerShell.exe -ExecutionPolicy Bypass -File .\Install.ps1
+    ```
+        
+4. The script will run and Windows Subsystem For Android™ will be installed
+!!!
+
+!!!info Virtualisierungsfehler
+
+![](https://user-images.githubusercontent.com/68629435/213985345-a6fc6e97-63f3-4741-8965-8d62a0d6b824.png)
+
+1. WSA entfernen
+
+2. Gehe zu "Windows-Features aktivieren oder deaktivieren" und deaktiviere Hyper-V, VM-Plattform, Windows-Hypervisor-Plattform, und Windows-Subsystem für Linux, dann neu starten.
+
+3. Aktiviere diese Features wieder und starte  ein zweites Mal neu.
+
+4. Stelle sicher, dass die Kernisolierung ausgeschaltet ist.
+
+5.  Gehe im Registrierungseditor (regedit) zu `\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FsDepends`
+
+    Ändere den Wert für "Start" von `3` zu `0`
+
+    !!!
+    Du kannst die Zahl auf 3 zurücksetzen, wenn es keinen Unterschied macht.
+    !!!
+
+6. Füge dann in CMD (als Administrator ausführen) folgendes ein:
+```cmd
+bcdedit /set hypervisorlaunchtype auto
+```
+7. Installiere WSA neu, indem du `Run.bat` ausführst
+!!!

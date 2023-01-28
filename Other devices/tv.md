@@ -43,7 +43,7 @@ Du kannst auch dem [!badge variant="secondary" text="Standard-Setup-Prozess"](/i
 
 [!badge variant="light" text="Schritt 5"] Klicke auf Starten
 
-[!embed](https://www.youtube.com/watch?v=BY22OtJYI0c)
+[!embed](https://www.youtube-nocookie.com/embed/BY22OtJYI0c)
 ___
 ### Methode 2: Dateien-App benutzen
 

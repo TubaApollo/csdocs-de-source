@@ -13,14 +13,12 @@ order: 999
 4. AllMoviesForYou `English`
 
 ### Anime
-1. Kamyroll EN `Crunchyroll`
-2. Kickassanime `Hexated`
-3. Zoro `English`
-4. Allanime `English`
-5. Sorastream `Hexated`
-6. Yugenanime `Hexated`
-7. Tenshi `English`
-8. Gogo `English`
+1. Kickassanime `Hexated`
+2. Zoro `English`
+3. Allanime `English`
+4. Sorastream `Hexated`
+5. Yugenanime `Hexated`
+6. Gogo `English`
 
 ### asiatische Inhalte
 1. Sorastream `Hexated`
@@ -44,5 +42,4 @@ order: 999
 1. XCine `Hexated`
 
 ### Anime
-1. Kamyroll DE `Crunchyroll`
-2. Anifreakz `Hexated`
+1. No source available :( (other providers partly have German subs)

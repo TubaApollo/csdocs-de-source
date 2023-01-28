@@ -21,7 +21,7 @@ ___
 Wenn die Anmeldung erfolgreich war, erscheint ein Popup mit der Meldung "Anilist authentifiziert" und es lässt sich oben rechts das Profilbild erkennen.
 !!!
 
-[!embed](https://www.youtube.com/watch?v=iEPK08b9OGE)
+[!embed](https://www.youtube-nocookie.com/embed/iEPK08b9OGE)
 ___
 ## Tracking
 

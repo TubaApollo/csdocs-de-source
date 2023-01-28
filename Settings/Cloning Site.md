@@ -17,4 +17,4 @@ Wenn die Website in der App für deine Region gesperrt ist, kannst du einen Klon
 [!badge variant="light" text="Schritt 3"] Ein aus zwei Buchstaben bestehender [Sprachcode](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) (damit wird festgelegt, wie die Website in der App angezeigt und sortiert wird; gebe einfach "en" ein, wenn du dir unsicher bist)
 
 
-[!embed](https://www.youtube.com/watch?v=4tR58jyG9uQ)
+[!embed](https://www.youtube-nocookie.com/embed/4tR58jyG9uQ)
